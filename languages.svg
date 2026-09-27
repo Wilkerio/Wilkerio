@@ -13,10 +13,10 @@
   <text x="0" y="18" class="title">DISTRIBUIÇÃO DE LINGUAGEM NOS REPOSITÓRIOS (bytes de código real)</text>
   <g clip-path="inset(0 round 4px)">
     <rect x="0" y="36" width="700" height="14" fill="#161b22"/>
-    <g transform="translate(0, 36)"><rect class="seg" style="animation-delay:0.00s" width="284.5330351142473" height="14" fill="#3178c6"/></g>
-<g transform="translate(284.5330351142473, 36)"><rect class="seg" style="animation-delay:0.08s" width="175.8618426579301" height="14" fill="#f1e05a"/></g>
-<g transform="translate(460.39487777217744, 36)"><rect class="seg" style="animation-delay:0.16s" width="133.70138188844086" height="14" fill="#e34c26"/></g>
-<g transform="translate(594.0962596606183, 36)"><rect class="seg" style="animation-delay:0.24s" width="105.90374033938173" height="14" fill="#663399"/></g>
+    <g transform="translate(0, 36)"><rect class="seg" style="animation-delay:0.00s" width="284.52780658117524" height="14" fill="#3178c6"/></g>
+<g transform="translate(284.52780658117524, 36)"><rect class="seg" style="animation-delay:0.08s" width="175.87147413600746" height="14" fill="#f1e05a"/></g>
+<g transform="translate(460.3992807171827, 36)"><rect class="seg" style="animation-delay:0.16s" width="133.69892501345373" height="14" fill="#e34c26"/></g>
+<g transform="translate(594.0982057306364, 36)"><rect class="seg" style="animation-delay:0.24s" width="105.90179426936353" height="14" fill="#663399"/></g>
 
   </g>
   <g transform="translate(0, 84)">
