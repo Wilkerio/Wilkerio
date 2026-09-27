@@ -1,0 +1,24 @@
+<svg width="560" height="244" viewBox="0 0 560 244" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cartão de status estilo terminal">
+  <style>
+    .row { opacity: 0; animation: slidein 0.4s ease-out forwards; }
+    @keyframes slidein { 0% { opacity: 0; transform: translateX(-14px); } 100% { opacity: 1; transform: translateX(0); } }
+    @media (prefers-reduced-motion: reduce) { .row { animation: none; opacity: 1; } }
+    .prompt { font: 600 13px "Cascadia Code","Fira Code",monospace; fill: #BB9354; }
+    .key { font: 400 13px "Cascadia Code","Fira Code",monospace; fill: #6e7681; }
+    .val { font: 600 13px "Cascadia Code","Fira Code",monospace; fill: #c9d1d9; }
+    .cursor { fill: #BB9354; animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+  <rect width="100%" height="100%" fill="#0d1117" rx="8"/>
+  <rect x="0.5" y="0.5" width="559" height="243" rx="8" fill="none" stroke="#7a6138"/>
+  <text x="24" y="20" class="prompt">wilkerio@gervia:~$ whoami --verbose</text>
+  <g class="row" style="animation-delay:0.00s"><text x="24" y="34" class="key">usuario</text><text x="200" y="34" class="val">Wilkerio</text></g>
+<g class="row" style="animation-delay:0.10s"><text x="24" y="58" class="key">stack</text><text x="200" y="58" class="val">TypeScript · React · Node · Python</text></g>
+<g class="row" style="animation-delay:0.20s"><text x="24" y="82" class="key">seguranca</text><text x="200" y="82" class="val">SAST, secret scan, pentest com IA</text></g>
+<g class="row" style="animation-delay:0.30s"><text x="24" y="106" class="key">mobile</text><text x="200" y="106" class="val">React Native / Expo</text></g>
+<g class="row" style="animation-delay:0.40s"><text x="24" y="130" class="key">repos publicos</text><text x="200" y="130" class="val">10</text></g>
+<g class="row" style="animation-delay:0.50s"><text x="24" y="154" class="key">contribuicoes/ano</text><text x="200" y="154" class="val">148</text></g>
+<g class="row" style="animation-delay:0.60s"><text x="24" y="178" class="key">dias ativos/ano</text><text x="200" y="178" class="val">43</text></g>
+<g class="row" style="animation-delay:0.70s"><text x="24" y="202" class="key">streak atual</text><text x="200" y="202" class="val">0 dias</text></g>
+  <rect class="cursor" x="24" y="228" width="8" height="14"/>
+</svg>

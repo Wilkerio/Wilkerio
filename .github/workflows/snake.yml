@@ -1,0 +1,31 @@
+name: generate snake animation
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: generate snake svg
+        uses: Platane/snk@v3
+        with:
+          github_user_name: Wilkerio
+          outputs: |
+            snake.svg?color_snake=%23BB9354&color_dots=%23161b22,%23072C5A,%230d3a7a,%23BB9354
+            snake-dark.svg?palette=github-dark
+
+      - name: push output to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
