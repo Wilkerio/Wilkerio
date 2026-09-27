@@ -17,6 +17,13 @@ const INK = "#c9d1d9";
 const MUTED = "#6e7681";
 const LEVEL_COLORS = ["#161b22", GOLD_DIM, BLUE_LIGHT, BLUE, GOLD];
 
+function esc(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
 async function fetchContributions() {
   const res = await fetch(`https://github.com/users/${USER}/contributions`, {
     headers: { "User-Agent": "Mozilla/5.0 gervia-readme-art" },
@@ -106,7 +113,7 @@ function buildNeofetchSvg({ total, days }, profile) {
     .map((l, i) => {
       const y = padTop + i * lineHeight;
       const delay = (i * 0.1).toFixed(2);
-      return `<g class="row" style="animation-delay:${delay}s"><text x="24" y="${y}" class="key">${l.k}</text><text x="200" y="${y}" class="val">${l.v}</text></g>`;
+      return `<g class="row" style="animation-delay:${delay}s"><text x="24" y="${y}" class="key">${esc(l.k)}</text><text x="200" y="${y}" class="val">${esc(l.v)}</text></g>`;
     })
     .join("\n");
 
@@ -189,9 +196,9 @@ function buildHeaderSvg() {
   </defs>
 
   <g transform="translate(64, 68)">
-    <text x="0" y="0" class="mark" clip-path="url(#markClip)">${mark}</text>
-    <text x="0" y="34" class="tag" clip-path="url(#tagClip)">${tagline}</text>
-    <text x="0" y="64" class="sub" clip-path="url(#subClip)">${sub}</text>
+    <text x="0" y="0" class="mark" clip-path="url(#markClip)">${esc(mark)}</text>
+    <text x="0" y="34" class="tag" clip-path="url(#tagClip)">${esc(tagline)}</text>
+    <text x="0" y="64" class="sub" clip-path="url(#subClip)">${esc(sub)}</text>
     <rect class="cursor" x="0" y="52" width="9" height="16"/>
   </g>
 </svg>`;

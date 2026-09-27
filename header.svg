@@ -36,7 +36,7 @@
 
   <g transform="translate(64, 68)">
     <text x="0" y="0" class="mark" clip-path="url(#markClip)">WILKERIO</text>
-    <text x="0" y="34" class="tag" clip-path="url(#tagClip)">full-stack engineer & application security</text>
+    <text x="0" y="34" class="tag" clip-path="url(#tagClip)">full-stack engineer &amp; application security</text>
     <text x="0" y="64" class="sub" clip-path="url(#subClip)">Construo o sistema e depois tento invadir ele.</text>
     <rect class="cursor" x="0" y="52" width="9" height="16"/>
   </g>
