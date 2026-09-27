@@ -134,6 +134,80 @@ function buildLanguagesSvg(langs) {
 </svg>`;
 }
 
+// Badges nossos (duas cores, cantos arredondados de verdade) em vez do shields.io —
+// mesma tipografia/paleta do resto do perfil, altura consistente.
+function measure(text, size) {
+  return text.length * size * 0.6;
+}
+
+function buildBadgeRowSvg(title, items) {
+  const fontSize = 12;
+  const padX = 10;
+  const gap = 8;
+  const badgeH = 26;
+  const maxWidth = 860;
+
+  const badges = items.map(([label, value, color]) => {
+    const labelW = measure(label, fontSize) + padX * 2;
+    const valueW = measure(value, fontSize) + padX * 2;
+    return { label, value, color: color || GOLD, labelW, valueW, w: labelW + valueW };
+  });
+
+  // quebra em linhas respeitando maxWidth
+  const rows = [];
+  let row = [];
+  let rowW = 0;
+  for (const b of badges) {
+    if (rowW + b.w + gap > maxWidth && row.length) {
+      rows.push(row);
+      row = [];
+      rowW = 0;
+    }
+    row.push(b);
+    rowW += b.w + gap;
+  }
+  if (row.length) rows.push(row);
+
+  const rowH = badgeH + 10;
+  const titleH = title ? 24 : 0;
+  const height = titleH + rows.length * rowH;
+  const width = maxWidth;
+
+  let content = "";
+  let delayIdx = 0;
+  rows.forEach((r, ri) => {
+    const totalRowW = r.reduce((s, b) => s + b.w, 0) + gap * (r.length - 1);
+    let x = (width - totalRowW) / 2;
+    const y = titleH + ri * rowH;
+    r.forEach((b) => {
+      const delay = (delayIdx * 0.05).toFixed(2);
+      content += `<g class="badge" style="animation-delay:${delay}s" transform="translate(${x}, ${y})">
+        <rect width="${b.w}" height="${badgeH}" rx="6" fill="#161b22"/>
+        <rect x="${b.labelW}" width="${b.valueW}" height="${badgeH}" rx="6" fill="${b.color}"/>
+        <rect x="${b.labelW - 6}" width="6" height="${badgeH}" fill="${b.color}"/>
+        <text x="${padX}" y="${badgeH / 2 + 4}" class="bl">${esc(b.label)}</text>
+        <text x="${b.labelW + padX}" y="${badgeH / 2 + 4}" class="bv">${esc(b.value)}</text>
+      </g>\n`;
+      x += b.w + gap;
+      delayIdx++;
+    });
+  });
+
+  return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(title || "badges")}">
+  <style>
+    .eyebrow { font: 600 11px "Cascadia Code","Fira Code",monospace; fill: ${GOLD_DIM}; letter-spacing: 2px; }
+    .bl { font: 500 12px "Cascadia Code","Fira Code",monospace; fill: ${INK}; }
+    .bv { font: 700 12px "Cascadia Code","Fira Code",monospace; fill: ${BG}; }
+    .badge { opacity: 0; animation: pop 0.3s ease-out forwards; transform-origin: center; }
+    @keyframes pop { 0% { opacity: 0; transform: scale(0.85); } 100% { opacity: 1; transform: scale(1); } }
+    @media (prefers-reduced-motion: reduce) { .badge { animation: none; opacity: 1; } }
+  </style>
+  <rect width="100%" height="100%" fill="${BG}" rx="10"/>
+  ${title ? `<text x="${width / 2}" y="16" text-anchor="middle" class="eyebrow">${esc(title)}</text>` : ""}
+  ${content}
+</svg>`;
+}
+
 function buildHeatmapSvg({ total, days }) {
   const weeks = [];
   for (let i = 0; i < days.length; i += 7) weeks.push(days.slice(i, i + 7));
@@ -410,5 +484,18 @@ try {
 } catch (e) {
   console.error("languages.svg não atualizado nesta rodada:", String(e));
 }
+
+const securityBadges = [
+  ["Semgrep", "SAST", BLUE],
+  ["gitleaks", "secret scan", GOLD],
+  ["Nuclei", "vuln scan", BLUE],
+  ["Strix", "AI pentest", GOLD],
+  ["Playwright", "E2E", BLUE],
+  ["OWASP", "ASVS", GOLD],
+  ["RLS", "isolamento multi-tenant", GOLD],
+  ["Claude Code", "Anthropic", GOLD],
+  ["DeepSeek", "LLM", BLUE],
+];
+writeFileSync(new URL("../badges.svg", import.meta.url), buildBadgeRowSvg("SEGURANÇA & IA", securityBadges));
 
 console.log(`OK — ${contrib.total} contribuições, ${contrib.days.length} dias, repos=${profile.public_repos}`);

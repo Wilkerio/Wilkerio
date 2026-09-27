@@ -14,18 +14,7 @@
 
 <br>
 
-<sub>SEGURANÇA &amp; IA</sub>
-<br><br>
-
-<img src="https://img.shields.io/badge/Semgrep-SAST-0d1117?style=flat-square&labelColor=072C5A&color=BB9354" alt="semgrep" />
-<img src="https://img.shields.io/badge/gitleaks-secret_scan-0d1117?style=flat-square&labelColor=072C5A&color=BB9354" alt="gitleaks" />
-<img src="https://img.shields.io/badge/Nuclei-vuln_scan-0d1117?style=flat-square&labelColor=072C5A&color=BB9354" alt="nuclei" />
-<img src="https://img.shields.io/badge/Strix-AI_pentest-0d1117?style=flat-square&labelColor=072C5A&color=BB9354" alt="strix" />
-<img src="https://img.shields.io/badge/Playwright-E2E-0d1117?style=flat-square&labelColor=072C5A&color=BB9354" alt="playwright" />
-<img src="https://img.shields.io/badge/OWASP-ASVS-0d1117?style=flat-square&labelColor=072C5A&color=BB9354" alt="owasp" />
-<img src="https://img.shields.io/badge/RLS-isolamento_multi--tenant-0d1117?style=flat-square&labelColor=072C5A&color=BB9354" alt="rls" />
-<img src="https://img.shields.io/badge/Claude_Code-Anthropic-0d1117?style=flat-square&logo=anthropic&logoColor=BB9354&labelColor=072C5A&color=BB9354" alt="claude code" />
-<img src="https://img.shields.io/badge/DeepSeek-LLM-0d1117?style=flat-square&logo=deepseek&logoColor=BB9354&labelColor=072C5A&color=BB9354" alt="deepseek" />
+<img src="./badges.svg" width="800" alt="Segurança e IA" />
 
 <br><br><br>
 
