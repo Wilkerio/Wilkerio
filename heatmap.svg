@@ -6,7 +6,7 @@
     .total { font: 600 13px "Segoe UI", sans-serif; fill: #BB9354; }
   </style>
   <rect width="100%" height="100%" fill="#0d1117" rx="8"/>
-  <text x="20" y="18" class="total">3809 contribuições no último ano</text>
+  <text x="20" y="18" class="total">3810 contribuições no último ano</text>
   <rect class="cell" x="20" y="24" width="11" height="11" rx="2" fill="#161b22" opacity="0" style="animation-delay:0.000s"><title>2025-09-28</title></rect>
 <rect class="cell" x="20" y="38" width="11" height="11" rx="2" fill="#161b22" opacity="0" style="animation-delay:0.012s"><title>2025-10-05</title></rect>
 <rect class="cell" x="20" y="52" width="11" height="11" rx="2" fill="#161b22" opacity="0" style="animation-delay:0.024s"><title>2025-10-12</title></rect>
