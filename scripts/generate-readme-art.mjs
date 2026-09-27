@@ -178,21 +178,26 @@ function buildHeaderSvg() {
 
 // Ícones reais (simple-icons), montados num grid próprio com reveal animado —
 // troca a imagem estática do skillicons.dev por algo nosso, versionado, com animação.
+// slug, rótulo, cor oficial da marca (verificada em simple-icons/data — não vem do
+// serviço de render cdn.simpleicons.org, que rate-limita fácil; path vem do CDN do
+// npm/jsdelivr, cor vem embutida aqui).
 const STACK = [
-  ["html5", "HTML"], ["css", "CSS"], ["javascript", "JavaScript"], ["typescript", "TypeScript"],
-  ["react", "React"], ["vite", "Vite"], ["tailwindcss", "Tailwind"], ["nodedotjs", "Node.js"],
-  ["python", "Python"], ["supabase", "Supabase"], ["postgresql", "PostgreSQL"], ["docker", "Docker"],
-  ["git", "Git"], ["github", "GitHub"], ["githubactions", "Actions"], ["figma", "Figma"],
-  ["gnubash", "Bash"], ["linux", "Linux"],
+  ["html5", "HTML", "E34F26"], ["css", "CSS", "663399"], ["javascript", "JavaScript", "F7DF1E"],
+  ["typescript", "TypeScript", "3178C6"], ["react", "React", "61DAFB"], ["vite", "Vite", "9135FF"],
+  ["tailwindcss", "Tailwind", "06B6D4"], ["nodedotjs", "Node.js", "5FA04E"], ["python", "Python", "3776AB"],
+  ["supabase", "Supabase", "3FCF8E"], ["postgresql", "PostgreSQL", "4169E1"], ["docker", "Docker", "2496ED"],
+  ["git", "Git", "F03C2E"], ["github", "GitHub", "FFFFFF"], ["githubactions", "Actions", "2088FF"],
+  ["figma", "Figma", "F24E1E"], ["gnubash", "Bash", "4EAA25"], ["linux", "Linux", "FCC624"],
 ];
 
 async function fetchIcon(slug) {
-  const res = await fetch(`https://cdn.simpleicons.org/${slug}`);
+  const res = await fetch(`https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/${slug}.svg`);
+  if (!res.ok) throw new Error(`${slug}: HTTP ${res.status}`);
   const svg = await res.text();
-  const fill = (svg.match(/fill="([^"]+)"/) || [, GOLD])[1];
   const viewBox = (svg.match(/viewBox="([^"]+)"/) || [, "0 0 24 24"])[1];
   const paths = [...svg.matchAll(/<path[^>]*d="[^"]*"[^>]*>/g)].map((m) => m[0]).join("");
-  return { fill, viewBox, paths };
+  if (!paths) throw new Error(`${slug}: sem path`);
+  return { viewBox, paths };
 }
 
 async function buildStackSvg() {
@@ -205,10 +210,15 @@ async function buildStackSvg() {
   const width = padLeft * 2 + perRow * cell;
   const height = padTop * 2 + rows * cell;
 
-  const icons = await Promise.all(STACK.map(([slug]) => fetchIcon(slug).catch(() => null)));
+  const icons = await Promise.all(STACK.map(([slug]) => fetchIcon(slug).catch((e) => { console.error(String(e)); return null; })));
+  const okCount = icons.filter(Boolean).length;
+  if (okCount < STACK.length) {
+    console.error(`Aviso: só ${okCount}/${STACK.length} ícones carregaram — não vou publicar grid incompleto.`);
+    if (okCount < STACK.length * 0.8) throw new Error("Falha demais buscando ícones — abortando geração de stack.svg");
+  }
 
   let content = "";
-  STACK.forEach(([, label], i) => {
+  STACK.forEach(([, label, hex], i) => {
     const icon = icons[i];
     if (!icon) return;
     const col = i % perRow;
@@ -220,7 +230,7 @@ async function buildStackSvg() {
     const delay = (i * 0.045).toFixed(3);
     content += `<g class="icon" style="animation-delay:${delay}s" transform="translate(${cx}, ${cy})">
       <rect x="-${cell / 2 - 6}" y="-${cell / 2 - 6}" width="${cell - 12}" height="${cell - 12}" rx="12" fill="#161b22"/>
-      <g transform="translate(${-iconSize / 2}, ${-iconSize / 2 - 6}) scale(${scale})" fill="#${icon.fill.replace("#", "")}">${icon.paths}</g>
+      <g transform="translate(${-iconSize / 2}, ${-iconSize / 2 - 6}) scale(${scale})" fill="#${hex}">${icon.paths}</g>
       <text x="0" y="${cell / 2 - 14}" text-anchor="middle" class="label">${esc(label)}</text>
     </g>\n`;
   });
@@ -239,12 +249,17 @@ async function buildStackSvg() {
 
 const contrib = await fetchContributions();
 const profile = await fetchPublicProfile();
-const stackSvg = await buildStackSvg();
 
 mkdirSync(new URL("..", import.meta.url), { recursive: true });
 writeFileSync(new URL("../heatmap.svg", import.meta.url), buildHeatmapSvg(contrib));
 writeFileSync(new URL("../neofetch.svg", import.meta.url), buildNeofetchSvg(contrib, profile));
 writeFileSync(new URL("../header.svg", import.meta.url), buildHeaderSvg());
-writeFileSync(new URL("../stack.svg", import.meta.url), stackSvg);
+
+try {
+  const stackSvg = await buildStackSvg();
+  writeFileSync(new URL("../stack.svg", import.meta.url), stackSvg);
+} catch (e) {
+  console.error("stack.svg não atualizado nesta rodada:", String(e));
+}
 
 console.log(`OK — ${contrib.total} contribuições, ${contrib.days.length} dias, repos=${profile.public_repos}`);
