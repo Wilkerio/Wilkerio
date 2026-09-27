@@ -181,12 +181,14 @@ function buildBadgeRowSvg(title, items) {
     const y = titleH + ri * rowH;
     r.forEach((b) => {
       const delay = (delayIdx * 0.05).toFixed(2);
-      content += `<g class="badge" style="animation-delay:${delay}s" transform="translate(${x}, ${y})">
+      content += `<g transform="translate(${x}, ${y})">
+      <g class="badge" style="animation-delay:${delay}s">
         <rect width="${b.w}" height="${badgeH}" rx="6" fill="#161b22"/>
         <rect x="${b.labelW}" width="${b.valueW}" height="${badgeH}" rx="6" fill="${b.color}"/>
         <rect x="${b.labelW - 6}" width="6" height="${badgeH}" fill="${b.color}"/>
         <text x="${padX}" y="${badgeH / 2 + 4}" class="bl">${esc(b.label)}</text>
         <text x="${b.labelW + padX}" y="${badgeH / 2 + 4}" class="bv">${esc(b.value)}</text>
+      </g>
       </g>\n`;
       x += b.w + gap;
       delayIdx++;
