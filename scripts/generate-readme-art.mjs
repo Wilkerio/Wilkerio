@@ -398,6 +398,7 @@ const STACK = [
   ["supabase", "Supabase", "3FCF8E"], ["postgresql", "PostgreSQL", "4169E1"], ["docker", "Docker", "2496ED"],
   ["git", "Git", "F03C2E"], ["github", "GitHub", "FFFFFF"], ["githubactions", "Actions", "2088FF"],
   ["figma", "Figma", "F24E1E"], ["gnubash", "Bash", "4EAA25"], ["linux", "Linux", "FCC624"],
+  ["java", "Java", "ED8B00"], ["php", "PHP", "777BB4"], ["cplusplus", "C++", "00599C"],
 ];
 
 async function fetchIcon(slug) {
