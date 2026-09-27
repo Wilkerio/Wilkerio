@@ -30,18 +30,6 @@
 
 <br><br><br>
 
-<h3><code>wilkerio@dev ~ $ ./cobra.sh</code></h3>
-
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Wilkerio/Wilkerio/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Wilkerio/Wilkerio/output/snake.svg" />
-  <img alt="cobra de contribuições" src="https://raw.githubusercontent.com/Wilkerio/Wilkerio/output/snake.svg" />
-</picture>
-
-<br><br><br>
-
 <h3><code>wilkerio@dev ~ $ whoami --verbose</code></h3>
 
 <br>
