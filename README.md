@@ -2,18 +2,17 @@
 
 <img src="./header.svg" width="900" alt="Wilkerio — full-stack engineer e segurança de aplicações" />
 
-<br>
+<br><br>
 
-<p>Construo o sistema inteiro — front, back, banco, infra — e depois tento quebrar ele antes que alguém mal-intencionado tente.</p>
+<sub>LINGUAGENS &amp; FERRAMENTAS</sub>
 
-<br>
+<br><br>
 
 <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vite,tailwind,nodejs,python,supabase,postgres,docker,git,github,githubactions,figma,bash,powershell,vscode,linux&theme=dark&perline=10" alt="stack" />
 
 <br><br>
 
-<img src="https://img.shields.io/badge/Claude_Code-Anthropic-0d1117?style=flat-square&logo=anthropic&logoColor=BB9354&labelColor=072C5A&color=BB9354" alt="claude code" />
-<img src="https://img.shields.io/badge/DeepSeek-LLM-0d1117?style=flat-square&logo=deepseek&logoColor=BB9354&labelColor=072C5A&color=BB9354" alt="deepseek" />
+<sub>SEGURANÇA &amp; IA</sub>
 
 <br><br>
 
@@ -24,6 +23,8 @@
 <img src="https://img.shields.io/badge/Playwright-E2E-0d1117?style=flat-square&labelColor=072C5A&color=BB9354" alt="playwright" />
 <img src="https://img.shields.io/badge/OWASP-ASVS-0d1117?style=flat-square&labelColor=072C5A&color=BB9354" alt="owasp" />
 <img src="https://img.shields.io/badge/RLS-isolamento_multi--tenant-0d1117?style=flat-square&labelColor=072C5A&color=BB9354" alt="rls" />
+<img src="https://img.shields.io/badge/Claude_Code-Anthropic-0d1117?style=flat-square&logo=anthropic&logoColor=BB9354&labelColor=072C5A&color=BB9354" alt="claude code" />
+<img src="https://img.shields.io/badge/DeepSeek-LLM-0d1117?style=flat-square&logo=deepseek&logoColor=BB9354&labelColor=072C5A&color=BB9354" alt="deepseek" />
 
 <br><br><br>
 
