@@ -8,7 +8,12 @@
 
 <br>
 
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vite,tailwind,nodejs,python,supabase,postgres,docker,expo,git,github,githubactions,figma,bash,powershell,vscode,linux&theme=dark&perline=11" alt="stack" />
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vite,tailwind,nodejs,python,supabase,postgres,docker,git,github,githubactions,figma,bash,powershell,vscode,linux&theme=dark&perline=10" alt="stack" />
+
+<br><br>
+
+<img src="https://img.shields.io/badge/Claude_Code-Anthropic-0d1117?style=flat-square&logo=anthropic&logoColor=BB9354&labelColor=072C5A&color=BB9354" alt="claude code" />
+<img src="https://img.shields.io/badge/DeepSeek-LLM-0d1117?style=flat-square&logo=deepseek&logoColor=BB9354&labelColor=072C5A&color=BB9354" alt="deepseek" />
 
 <br><br>
 
