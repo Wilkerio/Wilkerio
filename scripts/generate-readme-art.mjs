@@ -228,10 +228,12 @@ async function buildStackSvg() {
     const [, , vw, vh] = icon.viewBox.split(" ").map(Number);
     const scale = iconSize / Math.max(vw, vh);
     const delay = (i * 0.045).toFixed(3);
-    content += `<g class="icon" style="animation-delay:${delay}s" transform="translate(${cx}, ${cy})">
-      <rect x="-${cell / 2 - 6}" y="-${cell / 2 - 6}" width="${cell - 12}" height="${cell - 12}" rx="12" fill="#161b22"/>
-      <g transform="translate(${-iconSize / 2}, ${-iconSize / 2 - 6}) scale(${scale})" fill="#${hex}">${icon.paths}</g>
-      <text x="0" y="${cell / 2 - 14}" text-anchor="middle" class="label">${esc(label)}</text>
+    content += `<g transform="translate(${cx}, ${cy})">
+      <g class="icon" style="animation-delay:${delay}s">
+        <rect x="-${cell / 2 - 6}" y="-${cell / 2 - 6}" width="${cell - 12}" height="${cell - 12}" rx="12" fill="#161b22"/>
+        <g transform="translate(${-iconSize / 2}, ${-iconSize / 2 - 6}) scale(${scale})" fill="#${hex}">${icon.paths}</g>
+        <text x="0" y="${cell / 2 - 14}" text-anchor="middle" class="label">${esc(label)}</text>
+      </g>
     </g>\n`;
   });
 
