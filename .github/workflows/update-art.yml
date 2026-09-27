@@ -20,12 +20,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: gerar SVGs (sem token, so endpoints publicos)
+      - name: gerar SVGs (heatmap/header/stack sao publicos sem token; languages.svg usa o GITHUB_TOKEN do proprio Actions so pra ler linguagem dos repos PUBLICOS)
         run: node scripts/generate-readme-art.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: commit se mudou
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add heatmap.svg neofetch.svg header.svg stack.svg
+          git add heatmap.svg neofetch.svg header.svg stack.svg languages.svg
           git diff --cached --quiet || git commit -m "chore: atualizar arte do README [skip ci]"
           git push

@@ -1,0 +1,45 @@
+<svg width="700" height="114" viewBox="0 0 700 114" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Distribuição de linguagem nos repositórios">
+  <style>
+    .title { font: 600 12px "Cascadia Code","Fira Code",monospace; fill: #6e7681; letter-spacing: 1px; }
+    .seg { opacity: 0; transform-origin: left; animation: growBar 0.5s ease-out forwards; }
+    @keyframes growBar { 0% { opacity: 0; transform: scaleX(0); } 100% { opacity: 1; transform: scaleX(1); } }
+    .leg { opacity: 0; animation: reveal 0.3s ease-out forwards; }
+    @keyframes reveal { to { opacity: 1; } }
+    .leg-name { font: 500 12px "Cascadia Code","Fira Code",monospace; fill: #c9d1d9; }
+    .leg-pct { font: 400 11px "Cascadia Code","Fira Code",monospace; fill: #6e7681; }
+    @media (prefers-reduced-motion: reduce) { .seg, .leg { animation: none; opacity: 1; } }
+  </style>
+  <rect width="100%" height="100%" fill="#0d1117" rx="10"/>
+  <text x="0" y="18" class="title">DISTRIBUIÇÃO DE LINGUAGEM NOS REPOSITÓRIOS (bytes de código real)</text>
+  <g clip-path="inset(0 round 4px)">
+    <rect x="0" y="36" width="700" height="14" fill="#161b22"/>
+    <g transform="translate(0, 36)"><rect class="seg" style="animation-delay:0.00s" width="286.4682520104593" height="14" fill="#3178c6"/></g>
+<g transform="translate(286.4682520104593, 36)"><rect class="seg" style="animation-delay:0.08s" width="172.29698061078494" height="14" fill="#f1e05a"/></g>
+<g transform="translate(458.76523262124425, 36)"><rect class="seg" style="animation-delay:0.16s" width="134.610735606098" height="14" fill="#e34c26"/></g>
+<g transform="translate(593.3759682273422, 36)"><rect class="seg" style="animation-delay:0.24s" width="106.62403177265776" height="14" fill="#663399"/></g>
+
+  </g>
+  <g transform="translate(0, 84)">
+    <g class="leg" style="animation-delay:0.60s" transform="translate(0, 0)">
+      <rect width="10" height="10" y="-9" rx="2" fill="#3178c6"/>
+      <text x="16" y="0" class="leg-name">TypeScript</text>
+      <text x="16" y="14" class="leg-pct">40.9%</text>
+    </g>
+<g class="leg" style="animation-delay:0.65s" transform="translate(175, 0)">
+      <rect width="10" height="10" y="-9" rx="2" fill="#f1e05a"/>
+      <text x="16" y="0" class="leg-name">JavaScript</text>
+      <text x="16" y="14" class="leg-pct">24.6%</text>
+    </g>
+<g class="leg" style="animation-delay:0.70s" transform="translate(350, 0)">
+      <rect width="10" height="10" y="-9" rx="2" fill="#e34c26"/>
+      <text x="16" y="0" class="leg-name">HTML</text>
+      <text x="16" y="14" class="leg-pct">19.2%</text>
+    </g>
+<g class="leg" style="animation-delay:0.75s" transform="translate(525, 0)">
+      <rect width="10" height="10" y="-9" rx="2" fill="#663399"/>
+      <text x="16" y="0" class="leg-name">CSS</text>
+      <text x="16" y="14" class="leg-pct">15.2%</text>
+    </g>
+
+  </g>
+</svg>

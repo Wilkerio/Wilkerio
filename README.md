@@ -8,6 +8,10 @@
 <br>
 <img src="./stack.svg" width="756" alt="Linguagens e ferramentas" />
 
+<br><br>
+
+<img src="./languages.svg" width="700" alt="Distribuição de linguagem nos repositórios públicos" />
+
 <br>
 
 <sub>SEGURANÇA &amp; IA</sub>

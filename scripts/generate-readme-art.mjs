@@ -52,6 +52,88 @@ async function fetchPublicProfile() {
   return { public_repos: data.public_repos, followers: data.followers };
 }
 
+async function fetchLanguages() {
+  if (!TOKEN) return null; // GraphQL exige token; sem ele, pula esse gráfico (não trava o resto).
+  // privacy: PUBLIC de propósito — nunca expor composição de stack de repo privado de cliente num perfil público.
+  const query = `query { user(login: "${USER}") { repositories(first:100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) { nodes { languages(first:10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name color } } } } } } }`;
+  const res = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "User-Agent": "gervia-readme-art", ...AUTH_HEADERS },
+    body: JSON.stringify({ query }),
+  });
+  const json = await res.json();
+  if (json.errors) throw new Error(JSON.stringify(json.errors));
+  const totals = {};
+  json.data.user.repositories.nodes.forEach((r) => {
+    r.languages.edges.forEach((e) => {
+      totals[e.node.name] = totals[e.node.name] || { size: 0, color: e.node.color || MUTED };
+      totals[e.node.name].size += e.size;
+    });
+  });
+  const NOT_A_LANGUAGE = new Set(["Procfile", "Dockerfile"]);
+  return Object.entries(totals)
+    .filter(([name]) => !NOT_A_LANGUAGE.has(name))
+    .sort((a, b) => b[1].size - a[1].size);
+}
+
+function buildLanguagesSvg(langs) {
+  const top = langs.slice(0, 7);
+  const restSize = langs.slice(7).reduce((s, [, v]) => s + v.size, 0);
+  if (restSize > 0) top.push(["Outros", { size: restSize, color: "#484f58" }]);
+  const total = top.reduce((s, [, v]) => s + v.size, 0);
+
+  const width = 700;
+  const barHeight = 14;
+  const barY = 36;
+
+  let x = 0;
+  let barSegments = "";
+  let legend = "";
+  top.forEach(([name, v], i) => {
+    const pct = v.size / total;
+    const segWidth = pct * width;
+    const delay = (i * 0.08).toFixed(2);
+    barSegments += `<g transform="translate(${x}, ${barY})"><rect class="seg" style="animation-delay:${delay}s" width="${segWidth}" height="${barHeight}" fill="${v.color}"/></g>\n`;
+    x += segWidth;
+
+    const col = i % 4;
+    const row = Math.floor(i / 4);
+    const lx = col * 175;
+    const ly = row * 24;
+    const legDelay = (0.6 + i * 0.05).toFixed(2);
+    legend += `<g class="leg" style="animation-delay:${legDelay}s" transform="translate(${lx}, ${ly})">
+      <rect width="10" height="10" y="-9" rx="2" fill="${v.color}"/>
+      <text x="16" y="0" class="leg-name">${esc(name)}</text>
+      <text x="16" y="14" class="leg-pct">${(pct * 100).toFixed(1)}%</text>
+    </g>\n`;
+  });
+
+  const legendRows = Math.ceil(top.length / 4);
+  const height = barY + barHeight + 30 + legendRows * 34;
+
+  return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Distribuição de linguagem nos repositórios">
+  <style>
+    .title { font: 600 12px "Cascadia Code","Fira Code",monospace; fill: ${MUTED}; letter-spacing: 1px; }
+    .seg { opacity: 0; transform-origin: left; animation: growBar 0.5s ease-out forwards; }
+    @keyframes growBar { 0% { opacity: 0; transform: scaleX(0); } 100% { opacity: 1; transform: scaleX(1); } }
+    .leg { opacity: 0; animation: reveal 0.3s ease-out forwards; }
+    @keyframes reveal { to { opacity: 1; } }
+    .leg-name { font: 500 12px "Cascadia Code","Fira Code",monospace; fill: ${INK}; }
+    .leg-pct { font: 400 11px "Cascadia Code","Fira Code",monospace; fill: ${MUTED}; }
+    @media (prefers-reduced-motion: reduce) { .seg, .leg { animation: none; opacity: 1; } }
+  </style>
+  <rect width="100%" height="100%" fill="${BG}" rx="10"/>
+  <text x="0" y="18" class="title">DISTRIBUIÇÃO DE LINGUAGEM NOS REPOSITÓRIOS (bytes de código real)</text>
+  <g clip-path="inset(0 round 4px)">
+    <rect x="0" y="${barY}" width="${width}" height="${barHeight}" fill="#161b22"/>
+    ${barSegments}
+  </g>
+  <g transform="translate(0, ${barY + barHeight + 34})">
+    ${legend}
+  </g>
+</svg>`;
+}
+
 function buildHeatmapSvg({ total, days }) {
   const weeks = [];
   for (let i = 0; i < days.length; i += 7) weeks.push(days.slice(i, i + 7));
@@ -316,6 +398,17 @@ try {
   writeFileSync(new URL("../stack.svg", import.meta.url), stackSvg);
 } catch (e) {
   console.error("stack.svg não atualizado nesta rodada:", String(e));
+}
+
+try {
+  const langs = await fetchLanguages();
+  if (langs && langs.length) {
+    writeFileSync(new URL("../languages.svg", import.meta.url), buildLanguagesSvg(langs));
+  } else {
+    console.error("languages.svg não atualizado: sem token/sem dado.");
+  }
+} catch (e) {
+  console.error("languages.svg não atualizado nesta rodada:", String(e));
 }
 
 console.log(`OK — ${contrib.total} contribuições, ${contrib.days.length} dias, repos=${profile.public_repos}`);
