@@ -12,33 +12,33 @@
   <rect x="0.5" y="0.5" width="699" height="215" rx="10" fill="none" stroke="#7a6138"/>
   <text x="24" y="24" class="prompt">wilkerio@dev:~$ git log --oneline -6</text>
   <g class="row" style="animation-delay:0.00s">
-        <text x="24" y="40" class="sha">0de45b3</text>
-        <text x="96" y="40" class="msg">Redesenhar badges: chip com contorno e ponto de categoria…</text>
+        <text x="24" y="40" class="sha">c1b7b1b</text>
+        <text x="96" y="40" class="msg">Adicionar log de commits reais (git log --oneline estilo …</text>
         <text x="676" y="40" text-anchor="end" class="repo">Wilkerio</text>
       </g>
 <g class="row" style="animation-delay:0.12s">
-        <text x="24" y="66" class="sha">59a33df</text>
-        <text x="96" y="66" class="msg">Corrigir mesmo bug de transform colapsando badges (wrappe…</text>
+        <text x="24" y="66" class="sha">0de45b3</text>
+        <text x="96" y="66" class="msg">Redesenhar badges: chip com contorno e ponto de categoria…</text>
         <text x="676" y="66" text-anchor="end" class="repo">Wilkerio</text>
       </g>
 <g class="row" style="animation-delay:0.24s">
-        <text x="24" y="92" class="sha">24e5fb4</text>
-        <text x="96" y="92" class="msg">main</text>
-        <text x="676" y="92" text-anchor="end" class="repo">Evil-sio-</text>
+        <text x="24" y="92" class="sha">59a33df</text>
+        <text x="96" y="92" class="msg">Corrigir mesmo bug de transform colapsando badges (wrappe…</text>
+        <text x="676" y="92" text-anchor="end" class="repo">Wilkerio</text>
       </g>
 <g class="row" style="animation-delay:0.36s">
-        <text x="24" y="118" class="sha">6d8eadf</text>
-        <text x="96" y="118" class="msg">Migra landing para Vite/React + fixes de link/SEO</text>
-        <text x="676" y="118" text-anchor="end" class="repo">sitefortis</text>
+        <text x="24" y="118" class="sha">24e5fb4</text>
+        <text x="96" y="118" class="msg">main</text>
+        <text x="676" y="118" text-anchor="end" class="repo">Evil-sio-</text>
       </g>
 <g class="row" style="animation-delay:0.48s">
-        <text x="24" y="144" class="sha">ad1d305</text>
-        <text x="96" y="144" class="msg">Ajusta preload, ícones sociais e links reais de contato</text>
-        <text x="676" y="144" text-anchor="end" class="repo">Evil-sio-</text>
+        <text x="24" y="144" class="sha">6d8eadf</text>
+        <text x="96" y="144" class="msg">Migra landing para Vite/React + fixes de link/SEO</text>
+        <text x="676" y="144" text-anchor="end" class="repo">sitefortis</text>
       </g>
 <g class="row" style="animation-delay:0.60s">
-        <text x="24" y="170" class="sha">b19ce03</text>
-        <text x="96" y="170" class="msg">Site institucional Evilásio Júnior: rebrand completo da F…</text>
+        <text x="24" y="170" class="sha">ad1d305</text>
+        <text x="96" y="170" class="msg">Ajusta preload, ícones sociais e links reais de contato</text>
         <text x="676" y="170" text-anchor="end" class="repo">Evil-sio-</text>
       </g>
 </svg>
