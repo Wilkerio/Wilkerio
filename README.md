@@ -24,14 +24,6 @@
 
 <img src="./heatmap.svg" width="782" alt="Heatmap de contribuições" />
 
-<br><br>
-
-<img src="./commits.svg" width="700" alt="Últimos commits reais" />
-
-<br><br><br>
-
-<img src="./neofetch.svg" width="560" alt="Cartão de status" />
-
 <br><br><br>
 
 📍 Brasil &nbsp;·&nbsp; full-stack + segurança de aplicações

@@ -541,7 +541,6 @@ const profile = await fetchPublicProfile();
 
 mkdirSync(new URL("..", import.meta.url), { recursive: true });
 writeFileSync(new URL("../heatmap.svg", import.meta.url), buildHeatmapSvg(contrib));
-writeFileSync(new URL("../neofetch.svg", import.meta.url), buildNeofetchSvg(contrib, profile));
 writeFileSync(new URL("../header.svg", import.meta.url), buildHeaderSvg());
 
 try {
@@ -584,16 +583,5 @@ const badgeGroups = [
   },
 ];
 writeFileSync(new URL("../badges.svg", import.meta.url), buildBadgeGroupsSvg(badgeGroups));
-
-try {
-  const commits = await fetchRecentCommits();
-  if (commits.length) {
-    writeFileSync(new URL("../commits.svg", import.meta.url), buildCommitLogSvg(commits));
-  } else {
-    console.error("commits.svg não atualizado: sem dado.");
-  }
-} catch (e) {
-  console.error("commits.svg não atualizado nesta rodada:", String(e));
-}
 
 console.log(`OK — ${contrib.total} contribuições, ${contrib.days.length} dias, repos=${profile.public_repos}`);
