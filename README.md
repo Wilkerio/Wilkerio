@@ -24,6 +24,10 @@
 
 <img src="./heatmap.svg" width="782" alt="Heatmap de contribuições" />
 
+<br><br>
+
+<img src="./commits.svg" width="700" alt="Últimos commits reais" />
+
 <br><br><br>
 
 <h3><code>wilkerio@dev ~ $ ./cobra.sh</code></h3>

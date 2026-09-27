@@ -52,6 +52,67 @@ async function fetchPublicProfile() {
   return { public_repos: data.public_repos, followers: data.followers };
 }
 
+async function fetchRecentCommits() {
+  if (!TOKEN) return [];
+  const query = `query { user(login: "${USER}") { repositories(first:10, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC, orderBy: {field: PUSHED_AT, direction: DESC}) { nodes { name defaultBranchRef { target { ... on Commit { history(first:5) { nodes { oid message committedDate } } } } } } } } }`;
+  const res = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "User-Agent": "gervia-readme-art", ...AUTH_HEADERS },
+    body: JSON.stringify({ query }),
+  });
+  const json = await res.json();
+  if (json.errors) throw new Error(JSON.stringify(json.errors));
+  const NOISE = /^chore: atualizar arte do README/i;
+  const all = [];
+  json.data.user.repositories.nodes.forEach((r) => {
+    const commits = r.defaultBranchRef?.target?.history?.nodes || [];
+    commits.forEach((c) => {
+      const firstLine = c.message.split("\n")[0].trim();
+      if (NOISE.test(firstLine)) return;
+      all.push({ repo: r.name, sha: c.oid.slice(0, 7), msg: firstLine, date: c.committedDate });
+    });
+  });
+  all.sort((a, b) => new Date(b.date) - new Date(a.date));
+  return all.slice(0, 6);
+}
+
+function buildCommitLogSvg(commits) {
+  const width = 700;
+  const lineHeight = 26;
+  const padTop = 40;
+  const height = padTop + commits.length * lineHeight + 20;
+  const maxMsgLen = 58;
+
+  const rows = commits
+    .map((c, i) => {
+      const y = padTop + i * lineHeight;
+      const delay = (i * 0.12).toFixed(2);
+      const msg = c.msg.length > maxMsgLen ? c.msg.slice(0, maxMsgLen - 1) + "…" : c.msg;
+      return `<g class="row" style="animation-delay:${delay}s">
+        <text x="24" y="${y}" class="sha">${esc(c.sha)}</text>
+        <text x="96" y="${y}" class="msg">${esc(msg)}</text>
+        <text x="${width - 24}" y="${y}" text-anchor="end" class="repo">${esc(c.repo)}</text>
+      </g>`;
+    })
+    .join("\n");
+
+  return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Últimos commits reais">
+  <style>
+    .row { opacity: 0; animation: slidein 0.4s ease-out forwards; }
+    @keyframes slidein { 0% { opacity: 0; transform: translateX(-10px); } 100% { opacity: 1; transform: translateX(0); } }
+    .prompt { font: 600 13px "Cascadia Code","Fira Code",monospace; fill: ${GOLD}; }
+    .sha { font: 400 12px "Cascadia Code","Fira Code",monospace; fill: ${GOLD_DIM}; }
+    .msg { font: 500 12px "Cascadia Code","Fira Code",monospace; fill: ${INK}; }
+    .repo { font: 400 11px "Cascadia Code","Fira Code",monospace; fill: ${MUTED}; }
+    @media (prefers-reduced-motion: reduce) { .row { animation: none; opacity: 1; } }
+  </style>
+  <rect width="100%" height="100%" fill="${BG}" rx="10"/>
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="10" fill="none" stroke="${GOLD_DIM}"/>
+  <text x="24" y="24" class="prompt">wilkerio@dev:~$ git log --oneline -${commits.length}</text>
+  ${rows}
+</svg>`;
+}
+
 async function fetchLanguages() {
   if (!TOKEN) return null; // GraphQL exige token; sem ele, pula esse gráfico (não trava o resto).
   // privacy: PUBLIC de propósito — nunca expor composição de stack de repo privado de cliente num perfil público.
@@ -523,5 +584,16 @@ const badgeGroups = [
   },
 ];
 writeFileSync(new URL("../badges.svg", import.meta.url), buildBadgeGroupsSvg(badgeGroups));
+
+try {
+  const commits = await fetchRecentCommits();
+  if (commits.length) {
+    writeFileSync(new URL("../commits.svg", import.meta.url), buildCommitLogSvg(commits));
+  } else {
+    console.error("commits.svg não atualizado: sem dado.");
+  }
+} catch (e) {
+  console.error("commits.svg não atualizado nesta rodada:", String(e));
+}
 
 console.log(`OK — ${contrib.total} contribuições, ${contrib.days.length} dias, repos=${profile.public_repos}`);
