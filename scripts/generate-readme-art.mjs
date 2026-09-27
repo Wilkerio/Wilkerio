@@ -149,29 +149,50 @@ function buildHeaderSvg() {
   const sub = "Construo o sistema e depois tento invadir ele.";
 
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wilkerio — full-stack engineer e segurança de aplicações">
+  <defs>
+    <radialGradient id="glow" cx="30%" cy="38%" r="75%">
+      <stop offset="0%" stop-color="#2a2010" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="${BG}" stop-opacity="1"/>
+      <stop offset="100%" stop-color="${BG}"/>
+    </radialGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="${GOLD}" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="${GOLD}" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
   <style>
     .bracket { stroke: ${GOLD_DIM}; stroke-width: 2; fill: none; }
-    .mark { font: 700 64px Georgia, "Times New Roman", serif; fill: ${GOLD}; letter-spacing: 4px; opacity: 0; animation: reveal 0.25s ease-out forwards; animation-delay: 0.05s; }
+    .dot { opacity: 0.85; }
+    .mark { font: 700 66px Georgia, "Times New Roman", serif; fill: ${GOLD}; letter-spacing: 4px; opacity: 0; animation: reveal 0.25s ease-out forwards; animation-delay: 0.05s; }
     .tag { font: 400 16px "Cascadia Code","Fira Code",monospace; fill: ${INK}; opacity: 0; animation: reveal 0.2s ease-out forwards; animation-delay: 0.2s; }
     .sub { font: 400 14px "Cascadia Code","Fira Code",monospace; fill: ${MUTED}; opacity: 0; animation: reveal 0.2s ease-out forwards; animation-delay: 0.32s; }
     @keyframes reveal { 0% { opacity: 0; transform: translateX(-6px); } 100% { opacity: 1; transform: translateX(0); } }
+    .rule-anim { transform-origin: left; transform: scaleX(0); animation: growRule 0.5s ease-out forwards; animation-delay: 0.4s; }
+    @keyframes growRule { to { transform: scaleX(1); } }
     .cursor { fill: ${GOLD}; opacity: 0; animation: blink 1s step-end infinite; animation-delay: 0.5s; }
     @media (prefers-reduced-motion: reduce) {
       .mark, .tag, .sub { animation: none !important; opacity: 1 !important; }
+      .rule-anim { animation: none !important; transform: scaleX(1); }
       .cursor { opacity: 1; animation: blink 1s step-end infinite; }
     }
   </style>
-  <rect width="100%" height="100%" fill="${BG}" rx="10"/>
+  <rect width="100%" height="100%" fill="url(#glow)" rx="10"/>
+
+  <!-- pontos de janela de terminal -->
+  <circle class="dot" cx="44" cy="40" r="5" fill="${GOLD_DIM}"/>
+  <circle class="dot" cx="62" cy="40" r="5" fill="${BLUE_LIGHT}"/>
+  <circle class="dot" cx="80" cy="40" r="5" fill="${GOLD}"/>
 
   <!-- moldura estilo terminal -->
   <path class="bracket" d="M 28 24 L 16 24 L 16 ${height - 24} L 28 ${height - 24}"/>
   <path class="bracket" d="M ${width - 28} 24 L ${width - 16} 24 L ${width - 16} ${height - 24} L ${width - 28} ${height - 24}"/>
 
-  <g transform="translate(64, 68)">
+  <g transform="translate(64, 100)">
     <text x="0" y="0" class="mark">${esc(mark)}</text>
-    <text x="0" y="34" class="tag">${esc(tagline)}</text>
-    <text x="0" y="64" class="sub">${esc(sub)}</text>
-    <rect class="cursor" x="0" y="52" width="9" height="16"/>
+    <rect class="rule-anim" x="0" y="14" width="${width - 128}" height="2" fill="url(#rule)"/>
+    <text x="0" y="42" class="tag">${esc(tagline)}</text>
+    <text x="0" y="72" class="sub">${esc(sub)}</text>
+    <rect class="cursor" x="0" y="60" width="9" height="16"/>
   </g>
 </svg>`;
 }
