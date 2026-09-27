@@ -134,78 +134,91 @@ function buildLanguagesSvg(langs) {
 </svg>`;
 }
 
-// Badges nossos (duas cores, cantos arredondados de verdade) em vez do shields.io —
-// mesma tipografia/paleta do resto do perfil, altura consistente.
+// Badges nossos: chip com contorno fino + ponto indicador de categoria,
+// mais limpo que bloco bicolor. Suporta varios grupos com titulo proprio.
 function measure(text, size) {
   return text.length * size * 0.6;
 }
 
-function buildBadgeRowSvg(title, items) {
+function buildBadgeGroupsSvg(groups) {
   const fontSize = 12;
-  const padX = 10;
-  const gap = 8;
-  const badgeH = 26;
+  const padX = 14;
+  const gapDot = 9;
+  const gap = 10;
+  const badgeH = 30;
   const maxWidth = 860;
+  const groupGap = 34;
+  const groupTitleH = 22;
 
-  const badges = items.map(([label, value, color]) => {
-    const labelW = measure(label, fontSize) + padX * 2;
-    const valueW = measure(value, fontSize) + padX * 2;
-    return { label, value, color: color || GOLD, labelW, valueW, w: labelW + valueW };
-  });
-
-  // quebra em linhas respeitando maxWidth
-  const rows = [];
-  let row = [];
-  let rowW = 0;
-  for (const b of badges) {
-    if (rowW + b.w + gap > maxWidth && row.length) {
-      rows.push(row);
-      row = [];
-      rowW = 0;
+  function layoutGroup(items) {
+    const badges = items.map(([label, sub, color]) => {
+      const w = padX + 6 + gapDot + measure(label, fontSize) + (sub ? 6 + measure(sub, 10) : 0) + padX;
+      return { label, sub, color: color || GOLD, w };
+    });
+    const rows = [];
+    let row = [];
+    let rowW = 0;
+    for (const b of badges) {
+      if (rowW + b.w + gap > maxWidth && row.length) {
+        rows.push(row);
+        row = [];
+        rowW = 0;
+      }
+      row.push(b);
+      rowW += b.w + gap;
     }
-    row.push(b);
-    rowW += b.w + gap;
+    if (row.length) rows.push(row);
+    return rows;
   }
-  if (row.length) rows.push(row);
 
-  const rowH = badgeH + 10;
-  const titleH = title ? 24 : 0;
-  const height = titleH + rows.length * rowH;
-  const width = maxWidth;
+  let totalHeight = 0;
+  const groupLayouts = groups.map(({ title, items }) => {
+    const rows = layoutGroup(items);
+    const h = groupTitleH + rows.length * (badgeH + 10);
+    totalHeight += h + groupGap;
+    return { title, rows, h };
+  });
+  totalHeight -= groupGap;
 
   let content = "";
+  let cursorY = 0;
   let delayIdx = 0;
-  rows.forEach((r, ri) => {
-    const totalRowW = r.reduce((s, b) => s + b.w, 0) + gap * (r.length - 1);
-    let x = (width - totalRowW) / 2;
-    const y = titleH + ri * rowH;
-    r.forEach((b) => {
-      const delay = (delayIdx * 0.05).toFixed(2);
-      content += `<g transform="translate(${x}, ${y})">
-      <g class="badge" style="animation-delay:${delay}s">
-        <rect width="${b.w}" height="${badgeH}" rx="6" fill="#161b22"/>
-        <rect x="${b.labelW}" width="${b.valueW}" height="${badgeH}" rx="6" fill="${b.color}"/>
-        <rect x="${b.labelW - 6}" width="6" height="${badgeH}" fill="${b.color}"/>
-        <text x="${padX}" y="${badgeH / 2 + 4}" class="bl">${esc(b.label)}</text>
-        <text x="${b.labelW + padX}" y="${badgeH / 2 + 4}" class="bv">${esc(b.value)}</text>
-      </g>
-      </g>\n`;
-      x += b.w + gap;
-      delayIdx++;
+  groupLayouts.forEach(({ title, rows, h }) => {
+    content += `<text x="${maxWidth / 2}" y="${cursorY + 14}" text-anchor="middle" class="eyebrow">${esc(title)}</text>\n`;
+    rows.forEach((r, ri) => {
+      const totalRowW = r.reduce((s, b) => s + b.w, 0) + gap * (r.length - 1);
+      let x = (maxWidth - totalRowW) / 2;
+      const y = cursorY + groupTitleH + ri * (badgeH + 10);
+      r.forEach((b) => {
+        const delay = (delayIdx * 0.045).toFixed(2);
+        const dotCx = padX + 3;
+        const textX = padX + 6 + gapDot;
+        const labelW = measure(b.label, fontSize);
+        content += `<g transform="translate(${x}, ${y})">
+        <g class="badge" style="animation-delay:${delay}s">
+          <rect width="${b.w}" height="${badgeH}" rx="${badgeH / 2}" fill="none" stroke="${GOLD_DIM}" stroke-width="1.2"/>
+          <circle cx="${dotCx}" cy="${badgeH / 2}" r="3.5" fill="${b.color}"/>
+          <text x="${textX}" y="${badgeH / 2 + 4}" class="bl">${esc(b.label)}</text>
+          ${b.sub ? `<text x="${textX + labelW + 6}" y="${badgeH / 2 + 4}" class="bs">${esc(b.sub)}</text>` : ""}
+        </g>
+        </g>\n`;
+        x += b.w + gap;
+        delayIdx++;
+      });
     });
+    cursorY += h + groupGap;
   });
 
-  return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${esc(title || "badges")}">
+  return `<svg width="${maxWidth}" height="${totalHeight}" viewBox="0 0 ${maxWidth} ${totalHeight}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Segurança e IA">
   <style>
     .eyebrow { font: 600 11px "Cascadia Code","Fira Code",monospace; fill: ${GOLD_DIM}; letter-spacing: 2px; }
-    .bl { font: 500 12px "Cascadia Code","Fira Code",monospace; fill: ${INK}; }
-    .bv { font: 700 12px "Cascadia Code","Fira Code",monospace; fill: ${BG}; }
+    .bl { font: 600 12px "Cascadia Code","Fira Code",monospace; fill: ${INK}; }
+    .bs { font: 400 11px "Cascadia Code","Fira Code",monospace; fill: ${MUTED}; }
     .badge { opacity: 0; animation: pop 0.3s ease-out forwards; transform-origin: center; }
     @keyframes pop { 0% { opacity: 0; transform: scale(0.85); } 100% { opacity: 1; transform: scale(1); } }
     @media (prefers-reduced-motion: reduce) { .badge { animation: none; opacity: 1; } }
   </style>
   <rect width="100%" height="100%" fill="${BG}" rx="10"/>
-  ${title ? `<text x="${width / 2}" y="16" text-anchor="middle" class="eyebrow">${esc(title)}</text>` : ""}
   ${content}
 </svg>`;
 }
@@ -488,17 +501,27 @@ try {
   console.error("languages.svg não atualizado nesta rodada:", String(e));
 }
 
-const securityBadges = [
-  ["Semgrep", "SAST", BLUE],
-  ["gitleaks", "secret scan", GOLD],
-  ["Nuclei", "vuln scan", BLUE],
-  ["Strix", "AI pentest", GOLD],
-  ["Playwright", "E2E", BLUE],
-  ["OWASP", "ASVS", GOLD],
-  ["RLS", "isolamento multi-tenant", GOLD],
-  ["Claude Code", "Anthropic", GOLD],
-  ["DeepSeek", "LLM", BLUE],
+const badgeGroups = [
+  {
+    title: "SEGURANÇA",
+    items: [
+      ["Semgrep", "SAST", BLUE],
+      ["gitleaks", "secret scan", GOLD],
+      ["Nuclei", "vuln scan", BLUE],
+      ["Strix", "AI pentest", GOLD],
+      ["Playwright", "E2E", BLUE],
+      ["OWASP", "ASVS", GOLD],
+      ["RLS", "multi-tenant", GOLD],
+    ],
+  },
+  {
+    title: "INTELIGÊNCIA ARTIFICIAL",
+    items: [
+      ["Claude Code", "Anthropic", GOLD],
+      ["DeepSeek", "LLM", BLUE],
+    ],
+  },
 ];
-writeFileSync(new URL("../badges.svg", import.meta.url), buildBadgeRowSvg("SEGURANÇA & IA", securityBadges));
+writeFileSync(new URL("../badges.svg", import.meta.url), buildBadgeGroupsSvg(badgeGroups));
 
 console.log(`OK — ${contrib.total} contribuições, ${contrib.days.length} dias, repos=${profile.public_repos}`);

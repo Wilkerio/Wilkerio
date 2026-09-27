@@ -1,94 +1,86 @@
-<svg width="860" height="96" viewBox="0 0 860 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SEGURANÇA &amp; IA">
+<svg width="860" height="198" viewBox="0 0 860 198" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Segurança e IA">
   <style>
     .eyebrow { font: 600 11px "Cascadia Code","Fira Code",monospace; fill: #7a6138; letter-spacing: 2px; }
-    .bl { font: 500 12px "Cascadia Code","Fira Code",monospace; fill: #c9d1d9; }
-    .bv { font: 700 12px "Cascadia Code","Fira Code",monospace; fill: #0d1117; }
+    .bl { font: 600 12px "Cascadia Code","Fira Code",monospace; fill: #c9d1d9; }
+    .bs { font: 400 11px "Cascadia Code","Fira Code",monospace; fill: #6e7681; }
     .badge { opacity: 0; animation: pop 0.3s ease-out forwards; transform-origin: center; }
     @keyframes pop { 0% { opacity: 0; transform: scale(0.85); } 100% { opacity: 1; transform: scale(1); } }
     @media (prefers-reduced-motion: reduce) { .badge { animation: none; opacity: 1; } }
   </style>
   <rect width="100%" height="100%" fill="#0d1117" rx="10"/>
-  <text x="430" y="16" text-anchor="middle" class="eyebrow">SEGURANÇA &amp; IA</text>
-  <g transform="translate(51.19999999999999, 24)">
-      <g class="badge" style="animation-delay:0.00s">
-        <rect width="119.2" height="26" rx="6" fill="#161b22"/>
-        <rect x="70.4" width="48.8" height="26" rx="6" fill="#0B2A52"/>
-        <rect x="64.4" width="6" height="26" fill="#0B2A52"/>
-        <text x="10" y="17" class="bl">Semgrep</text>
-        <text x="80.4" y="17" class="bv">SAST</text>
-      </g>
-      </g>
-<g transform="translate(178.39999999999998, 24)">
-      <g class="badge" style="animation-delay:0.05s">
-        <rect width="176.8" height="26" rx="6" fill="#161b22"/>
-        <rect x="77.6" width="99.2" height="26" rx="6" fill="#BB9354"/>
-        <rect x="71.6" width="6" height="26" fill="#BB9354"/>
-        <text x="10" y="17" class="bl">gitleaks</text>
-        <text x="87.6" y="17" class="bv">secret scan</text>
-      </g>
-      </g>
-<g transform="translate(363.2, 24)">
-      <g class="badge" style="animation-delay:0.10s">
-        <rect width="148" height="26" rx="6" fill="#161b22"/>
-        <rect x="63.199999999999996" width="84.8" height="26" rx="6" fill="#0B2A52"/>
-        <rect x="57.199999999999996" width="6" height="26" fill="#0B2A52"/>
-        <text x="10" y="17" class="bl">Nuclei</text>
-        <text x="73.19999999999999" y="17" class="bv">vuln scan</text>
-      </g>
-      </g>
-<g transform="translate(519.2, 24)">
-      <g class="badge" style="animation-delay:0.15s">
-        <rect width="148" height="26" rx="6" fill="#161b22"/>
-        <rect x="56" width="92" height="26" rx="6" fill="#BB9354"/>
-        <rect x="50" width="6" height="26" fill="#BB9354"/>
-        <text x="10" y="17" class="bl">Strix</text>
-        <text x="66" y="17" class="bv">AI pentest</text>
-      </g>
-      </g>
-<g transform="translate(675.2, 24)">
-      <g class="badge" style="animation-delay:0.20s">
-        <rect width="133.6" height="26" rx="6" fill="#161b22"/>
-        <rect x="92" width="41.599999999999994" height="26" rx="6" fill="#0B2A52"/>
-        <rect x="86" width="6" height="26" fill="#0B2A52"/>
-        <text x="10" y="17" class="bl">Playwright</text>
-        <text x="102" y="17" class="bv">E2E</text>
-      </g>
-      </g>
-<g transform="translate(100.39999999999998, 60)">
-      <g class="badge" style="animation-delay:0.25s">
-        <rect width="104.8" height="26" rx="6" fill="#161b22"/>
-        <rect x="56" width="48.8" height="26" rx="6" fill="#BB9354"/>
-        <rect x="50" width="6" height="26" fill="#BB9354"/>
-        <text x="10" y="17" class="bl">OWASP</text>
-        <text x="66" y="17" class="bv">ASVS</text>
-      </g>
-      </g>
-<g transform="translate(213.2, 60)">
-      <g class="badge" style="animation-delay:0.30s">
-        <rect width="227.2" height="26" rx="6" fill="#161b22"/>
-        <rect x="41.599999999999994" width="185.6" height="26" rx="6" fill="#BB9354"/>
-        <rect x="35.599999999999994" width="6" height="26" fill="#BB9354"/>
-        <text x="10" y="17" class="bl">RLS</text>
-        <text x="51.599999999999994" y="17" class="bv">isolamento multi-tenant</text>
-      </g>
-      </g>
-<g transform="translate(448.4, 60)">
-      <g class="badge" style="animation-delay:0.35s">
-        <rect width="184" height="26" rx="6" fill="#161b22"/>
-        <rect x="99.2" width="84.8" height="26" rx="6" fill="#BB9354"/>
-        <rect x="93.2" width="6" height="26" fill="#BB9354"/>
-        <text x="10" y="17" class="bl">Claude Code</text>
-        <text x="109.2" y="17" class="bv">Anthropic</text>
-      </g>
-      </g>
-<g transform="translate(640.4, 60)">
-      <g class="badge" style="animation-delay:0.40s">
-        <rect width="119.19999999999999" height="26" rx="6" fill="#161b22"/>
-        <rect x="77.6" width="41.599999999999994" height="26" rx="6" fill="#0B2A52"/>
-        <rect x="71.6" width="6" height="26" fill="#0B2A52"/>
-        <text x="10" y="17" class="bl">DeepSeek</text>
-        <text x="87.6" y="17" class="bv">LLM</text>
-      </g>
-      </g>
+  <text x="430" y="14" text-anchor="middle" class="eyebrow">SEGURANÇA</text>
+<g transform="translate(46.89999999999998, 22)">
+        <g class="badge" style="animation-delay:0.00s">
+          <rect width="123.4" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
+          <circle cx="17" cy="15" r="3.5" fill="#0B2A52"/>
+          <text x="29" y="19" class="bl">Semgrep</text>
+          <text x="85.4" y="19" class="bs">SAST</text>
+        </g>
+        </g>
+<g transform="translate(180.29999999999998, 22)">
+        <g class="badge" style="animation-delay:0.04s">
+          <rect width="172.6" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
+          <circle cx="17" cy="15" r="3.5" fill="#BB9354"/>
+          <text x="29" y="19" class="bl">gitleaks</text>
+          <text x="92.6" y="19" class="bs">secret scan</text>
+        </g>
+        </g>
+<g transform="translate(362.9, 22)">
+        <g class="badge" style="animation-delay:0.09s">
+          <rect width="146.2" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
+          <circle cx="17" cy="15" r="3.5" fill="#0B2A52"/>
+          <text x="29" y="19" class="bl">Nuclei</text>
+          <text x="78.19999999999999" y="19" class="bs">vuln scan</text>
+        </g>
+        </g>
+<g transform="translate(519.0999999999999, 22)">
+        <g class="badge" style="animation-delay:0.14s">
+          <rect width="145" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
+          <circle cx="17" cy="15" r="3.5" fill="#BB9354"/>
+          <text x="29" y="19" class="bl">Strix</text>
+          <text x="71" y="19" class="bs">AI pentest</text>
+        </g>
+        </g>
+<g transform="translate(674.0999999999999, 22)">
+        <g class="badge" style="animation-delay:0.18s">
+          <rect width="139" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
+          <circle cx="17" cy="15" r="3.5" fill="#0B2A52"/>
+          <text x="29" y="19" class="bl">Playwright</text>
+          <text x="107" y="19" class="bs">E2E</text>
+        </g>
+        </g>
+<g transform="translate(299.2, 62)">
+        <g class="badge" style="animation-delay:0.22s">
+          <rect width="109" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
+          <circle cx="17" cy="15" r="3.5" fill="#BB9354"/>
+          <text x="29" y="19" class="bl">OWASP</text>
+          <text x="71" y="19" class="bs">ASVS</text>
+        </g>
+        </g>
+<g transform="translate(418.2, 62)">
+        <g class="badge" style="animation-delay:0.27s">
+          <rect width="142.6" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
+          <circle cx="17" cy="15" r="3.5" fill="#BB9354"/>
+          <text x="29" y="19" class="bl">RLS</text>
+          <text x="56.599999999999994" y="19" class="bs">multi-tenant</text>
+        </g>
+        </g>
+<text x="430" y="150" text-anchor="middle" class="eyebrow">INTELIGÊNCIA ARTIFICIAL</text>
+<g transform="translate(271.6, 158)">
+        <g class="badge" style="animation-delay:0.32s">
+          <rect width="182.2" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
+          <circle cx="17" cy="15" r="3.5" fill="#BB9354"/>
+          <text x="29" y="19" class="bl">Claude Code</text>
+          <text x="114.2" y="19" class="bs">Anthropic</text>
+        </g>
+        </g>
+<g transform="translate(463.8, 158)">
+        <g class="badge" style="animation-delay:0.36s">
+          <rect width="124.6" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
+          <circle cx="17" cy="15" r="3.5" fill="#0B2A52"/>
+          <text x="29" y="19" class="bl">DeepSeek</text>
+          <text x="92.6" y="19" class="bs">LLM</text>
+        </g>
+        </g>
 
 </svg>
