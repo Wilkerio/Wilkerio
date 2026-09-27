@@ -201,7 +201,7 @@ function measure(text, size) {
   return text.length * size * 0.6;
 }
 
-function buildBadgeGroupsSvg(groups) {
+async function buildBadgeGroupsSvg(groups) {
   const fontSize = 12;
   const padX = 14;
   const gapDot = 9;
@@ -210,11 +210,27 @@ function buildBadgeGroupsSvg(groups) {
   const maxWidth = 860;
   const groupGap = 34;
   const groupTitleH = 22;
+  const iconSize = 15;
+
+  // pre-busca os icones reais (so os que tem slug); os sem logo ficam com o pontinho.
+  const allItems = groups.flatMap((g) => g.items);
+  const iconCache = {};
+  await Promise.all(
+    [...new Set(allItems.map((i) => i[3]).filter(Boolean))].map(async (slug) => {
+      try {
+        iconCache[slug] = await fetchIcon(slug);
+      } catch {
+        iconCache[slug] = null;
+      }
+    })
+  );
 
   function layoutGroup(items) {
-    const badges = items.map(([label, sub, color]) => {
-      const w = padX + 6 + gapDot + measure(label, fontSize) + (sub ? 6 + measure(sub, 10) : 0) + padX;
-      return { label, sub, color: color || GOLD, w };
+    const badges = items.map(([label, sub, color, iconSlug]) => {
+      const icon = iconSlug ? iconCache[iconSlug] : null;
+      const markerW = icon ? iconSize + 6 : 6 + gapDot;
+      const w = padX + markerW + measure(label, fontSize) + (sub ? 6 + measure(sub, 10) : 0) + padX;
+      return { label, sub, color: color || GOLD, icon, markerW, w };
     });
     const rows = [];
     let row = [];
@@ -252,13 +268,20 @@ function buildBadgeGroupsSvg(groups) {
       const y = cursorY + groupTitleH + ri * (badgeH + 10);
       r.forEach((b) => {
         const delay = (delayIdx * 0.045).toFixed(2);
-        const dotCx = padX + 3;
-        const textX = padX + 6 + gapDot;
+        const textX = padX + b.markerW;
         const labelW = measure(b.label, fontSize);
+        let marker;
+        if (b.icon) {
+          const [, , vw, vh] = b.icon.viewBox.split(" ").map(Number);
+          const scale = iconSize / Math.max(vw, vh);
+          marker = `<g transform="translate(${padX}, ${(badgeH - iconSize) / 2}) scale(${scale})" fill="${b.color}">${b.icon.paths}</g>`;
+        } else {
+          marker = `<circle cx="${padX + 3}" cy="${badgeH / 2}" r="3.5" fill="${b.color}"/>`;
+        }
         content += `<g transform="translate(${x}, ${y})">
         <g class="badge" style="animation-delay:${delay}s">
           <rect width="${b.w}" height="${badgeH}" rx="${badgeH / 2}" fill="none" stroke="${GOLD_DIM}" stroke-width="1.2"/>
-          <circle cx="${dotCx}" cy="${badgeH / 2}" r="3.5" fill="${b.color}"/>
+          ${marker}
           <text x="${textX}" y="${badgeH / 2 + 4}" class="bl">${esc(b.label)}</text>
           ${b.sub ? `<text x="${textX + labelW + 6}" y="${badgeH / 2 + 4}" class="bs">${esc(b.sub)}</text>` : ""}
         </g>
@@ -284,19 +307,45 @@ function buildBadgeGroupsSvg(groups) {
 </svg>`;
 }
 
+const MESES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+
 function buildHeatmapSvg({ total, days }) {
+  // reconstroi a grade pela DATA real, não pela ordem do array — o HTML do GitHub
+  // lista as células por dia-da-semana primeiro (todo domingo, depois toda segunda...),
+  // então usar a ordem crua como "semana" gerava um zigue-zague visual (parecia texto).
+  const dated = days.map((d) => ({ ...d, dt: new Date(d.date + "T00:00:00") }));
+  const firstSunday = new Date(dated[0].dt);
+  firstSunday.setDate(firstSunday.getDate() - firstSunday.getDay());
   const weeks = [];
-  for (let i = 0; i < days.length; i += 7) weeks.push(days.slice(i, i + 7));
+  dated.forEach((d) => {
+    const weekIdx = Math.floor((d.dt - firstSunday) / (7 * 86400000));
+    const weekday = d.dt.getDay();
+    if (!weeks[weekIdx]) weeks[weekIdx] = [];
+    weeks[weekIdx][weekday] = d;
+  });
+  weeks.forEach((w) => {
+    for (let i = 0; i < 7; i++) if (!w[i]) w[i] = { date: "", level: 0 };
+  });
 
   const cell = 11;
   const gap = 3;
-  const padTop = 30;
+  const padTop = 48;
   const padLeft = 20;
   const width = padLeft * 2 + weeks.length * (cell + gap);
-  const height = padTop + 7 * (cell + gap) + 10;
+  const height = padTop + 7 * (cell + gap) + 40;
 
   let cells = "";
+  let months = "";
+  let lastMonth = null;
   weeks.forEach((week, wi) => {
+    const firstDay = week.find((d) => d.date);
+    if (firstDay) {
+      const m = new Date(firstDay.date + "T00:00:00").getMonth();
+      if (m !== lastMonth) {
+        months += `<text x="${padLeft + wi * (cell + gap)}" y="${padTop - 14}" class="month">${MESES[m]}</text>\n`;
+        lastMonth = m;
+      }
+    }
     week.forEach((day, di) => {
       const x = padLeft + wi * (cell + gap);
       const y = padTop + di * (cell + gap);
@@ -305,16 +354,28 @@ function buildHeatmapSvg({ total, days }) {
     });
   });
 
+  const legendY = padTop + 7 * (cell + gap) + 22;
+  const legendStartX = width - padLeft - 5 * (cell + gap) - 46;
+  let legend = `<text x="${legendStartX - 8}" y="${legendY + 9}" text-anchor="end" class="legend-label">Less</text>\n`;
+  LEVEL_COLORS.forEach((c, i) => {
+    legend += `<rect x="${legendStartX + i * (cell + gap)}" y="${legendY}" width="${cell}" height="${cell}" rx="2" fill="${c}"/>\n`;
+  });
+  legend += `<text x="${legendStartX + 5 * (cell + gap) + 8}" y="${legendY + 9}" class="legend-label">More</text>\n`;
+
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico de contribuições">
   <style>
     .cell { animation: reveal 0.5s ease-out forwards; transform-origin: center; }
     @keyframes reveal { 0% { opacity: 0; transform: translate(-6px,-6px) scale(0.4); } 100% { opacity: 1; transform: translate(0,0) scale(1); } }
     @media (prefers-reduced-motion: reduce) { .cell { animation: none; opacity: 1; } }
     .total { font: 600 13px "Segoe UI", sans-serif; fill: ${GOLD}; }
+    .month { font: 500 10px "Cascadia Code","Fira Code",monospace; fill: ${MUTED}; }
+    .legend-label { font: 400 10px "Cascadia Code","Fira Code",monospace; fill: ${MUTED}; }
   </style>
   <rect width="100%" height="100%" fill="${BG}" rx="8"/>
   <text x="${padLeft}" y="18" class="total">${total} contribuições no último ano</text>
+  ${months}
   ${cells}
+  ${legend}
 </svg>`;
 }
 
@@ -569,19 +630,19 @@ const badgeGroups = [
       ["gitleaks", "secret scan", GOLD],
       ["Nuclei", "vuln scan", BLUE],
       ["Strix", "AI pentest", GOLD],
-      ["Playwright", "E2E", BLUE],
-      ["OWASP", "ASVS", GOLD],
+      ["Playwright", "E2E", BLUE, "playwright"],
+      ["OWASP", "ASVS", GOLD, "owasp"],
       ["RLS", "multi-tenant", GOLD],
     ],
   },
   {
     title: "INTELIGÊNCIA ARTIFICIAL",
     items: [
-      ["Claude Code", "Anthropic", GOLD],
-      ["DeepSeek", "LLM", BLUE],
+      ["Claude Code", "Anthropic", GOLD, "anthropic"],
+      ["DeepSeek", "LLM", BLUE, "deepseek"],
     ],
   },
 ];
-writeFileSync(new URL("../badges.svg", import.meta.url), buildBadgeGroupsSvg(badgeGroups));
+writeFileSync(new URL("../badges.svg", import.meta.url), await buildBadgeGroupsSvg(badgeGroups));
 
 console.log(`OK — ${contrib.total} contribuições, ${contrib.days.length} dias, repos=${profile.public_repos}`);
