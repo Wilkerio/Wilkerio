@@ -147,6 +147,20 @@ function buildHeaderSvg() {
   const mark = "WILKERIO";
   const tagline = "full-stack engineer & application security";
   const sub = "Construo o sistema e depois tento invadir ele.";
+  const focus = [
+    "SaaS multi-tenant (Supabase / RLS)",
+    "Pentest com agente de IA (Strix)",
+    "CI/CD com gates de segurança",
+    "Full-stack TypeScript / React / Node",
+  ];
+  const dividerX = 528;
+
+  const focusRows = focus
+    .map((f, i) => {
+      const delay = (0.55 + i * 0.1).toFixed(2);
+      return `<g class="focus-row" style="animation-delay:${delay}s"><text x="0" y="${i * 26}" class="focus-mark">›</text><text x="16" y="${i * 26}" class="focus">${esc(f)}</text></g>`;
+    })
+    .join("\n");
 
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wilkerio — full-stack engineer e segurança de aplicações">
   <defs>
@@ -159,6 +173,11 @@ function buildHeaderSvg() {
       <stop offset="0%" stop-color="${GOLD}" stop-opacity="0.9"/>
       <stop offset="100%" stop-color="${GOLD}" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="divider" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${GOLD_DIM}" stop-opacity="0"/>
+      <stop offset="50%" stop-color="${GOLD_DIM}" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="${GOLD_DIM}" stop-opacity="0"/>
+    </linearGradient>
   </defs>
   <style>
     .bracket { stroke: ${GOLD_DIM}; stroke-width: 2; fill: none; }
@@ -170,8 +189,12 @@ function buildHeaderSvg() {
     .rule-anim { transform-origin: left; transform: scaleX(0); animation: growRule 0.5s ease-out forwards; animation-delay: 0.4s; }
     @keyframes growRule { to { transform: scaleX(1); } }
     .cursor { fill: ${GOLD}; opacity: 0; animation: blink 1s step-end infinite; animation-delay: 0.5s; }
+    .eyebrow { font: 600 11px "Cascadia Code","Fira Code",monospace; fill: ${GOLD_DIM}; letter-spacing: 2px; opacity: 0; animation: reveal 0.2s ease-out forwards; animation-delay: 0.48s; }
+    .focus-row { opacity: 0; animation: reveal 0.25s ease-out forwards; }
+    .focus-mark { font: 600 13px "Cascadia Code","Fira Code",monospace; fill: ${GOLD}; }
+    .focus { font: 400 13px "Cascadia Code","Fira Code",monospace; fill: ${INK}; }
     @media (prefers-reduced-motion: reduce) {
-      .mark, .tag, .sub { animation: none !important; opacity: 1 !important; }
+      .mark, .tag, .sub, .eyebrow, .focus-row { animation: none !important; opacity: 1 !important; }
       .rule-anim { animation: none !important; transform: scaleX(1); }
       .cursor { opacity: 1; animation: blink 1s step-end infinite; }
     }
@@ -187,9 +210,19 @@ function buildHeaderSvg() {
   <path class="bracket" d="M 28 24 L 16 24 L 16 ${height - 24} L 28 ${height - 24}"/>
   <path class="bracket" d="M ${width - 28} 24 L ${width - 16} 24 L ${width - 16} ${height - 24} L ${width - 28} ${height - 24}"/>
 
+  <!-- divisor central -->
+  <rect x="${dividerX}" y="30" width="1" height="${height - 60}" fill="url(#divider)"/>
+
+  <g transform="translate(${dividerX + 40}, 78)">
+    <text x="0" y="0" class="eyebrow">FOCO</text>
+    <g transform="translate(0, 22)">
+      ${focusRows}
+    </g>
+  </g>
+
   <g transform="translate(64, 100)">
     <text x="0" y="0" class="mark">${esc(mark)}</text>
-    <rect class="rule-anim" x="0" y="14" width="${width - 128}" height="2" fill="url(#rule)"/>
+    <rect class="rule-anim" x="0" y="14" width="${dividerX - 64 - 64}" height="2" fill="url(#rule)"/>
     <text x="0" y="42" class="tag">${esc(tagline)}</text>
     <text x="0" y="72" class="sub">${esc(sub)}</text>
     <rect class="cursor" x="0" y="60" width="9" height="16"/>
