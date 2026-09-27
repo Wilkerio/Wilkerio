@@ -2,18 +2,15 @@
 
 <img src="./header.svg" width="900" alt="Wilkerio — full-stack engineer e segurança de aplicações" />
 
-<br><br>
+<br>
 
 <sub>LINGUAGENS &amp; FERRAMENTAS</sub>
+<br>
+<img src="./stack.svg" width="756" alt="Linguagens e ferramentas" />
 
-<br><br>
-
-<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vite,tailwind,nodejs,python,supabase,postgres,docker,git,github,githubactions,figma,bash,powershell,vscode,linux&theme=dark&perline=10" alt="stack" />
-
-<br><br>
+<br>
 
 <sub>SEGURANÇA &amp; IA</sub>
-
 <br><br>
 
 <img src="https://img.shields.io/badge/Semgrep-SAST-0d1117?style=flat-square&labelColor=072C5A&color=BB9354" alt="semgrep" />

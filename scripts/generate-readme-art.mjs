@@ -176,12 +176,75 @@ function buildHeaderSvg() {
 </svg>`;
 }
 
+// Ícones reais (simple-icons), montados num grid próprio com reveal animado —
+// troca a imagem estática do skillicons.dev por algo nosso, versionado, com animação.
+const STACK = [
+  ["html5", "HTML"], ["css", "CSS"], ["javascript", "JavaScript"], ["typescript", "TypeScript"],
+  ["react", "React"], ["vite", "Vite"], ["tailwindcss", "Tailwind"], ["nodedotjs", "Node.js"],
+  ["python", "Python"], ["supabase", "Supabase"], ["postgresql", "PostgreSQL"], ["docker", "Docker"],
+  ["git", "Git"], ["github", "GitHub"], ["githubactions", "Actions"], ["figma", "Figma"],
+  ["gnubash", "Bash"], ["linux", "Linux"],
+];
+
+async function fetchIcon(slug) {
+  const res = await fetch(`https://cdn.simpleicons.org/${slug}`);
+  const svg = await res.text();
+  const fill = (svg.match(/fill="([^"]+)"/) || [, GOLD])[1];
+  const viewBox = (svg.match(/viewBox="([^"]+)"/) || [, "0 0 24 24"])[1];
+  const paths = [...svg.matchAll(/<path[^>]*d="[^"]*"[^>]*>/g)].map((m) => m[0]).join("");
+  return { fill, viewBox, paths };
+}
+
+async function buildStackSvg() {
+  const perRow = 9;
+  const cell = 84;
+  const iconSize = 34;
+  const padTop = 20;
+  const padLeft = 20;
+  const rows = Math.ceil(STACK.length / perRow);
+  const width = padLeft * 2 + perRow * cell;
+  const height = padTop * 2 + rows * cell;
+
+  const icons = await Promise.all(STACK.map(([slug]) => fetchIcon(slug).catch(() => null)));
+
+  let content = "";
+  STACK.forEach(([, label], i) => {
+    const icon = icons[i];
+    if (!icon) return;
+    const col = i % perRow;
+    const row = Math.floor(i / perRow);
+    const cx = padLeft + col * cell + cell / 2;
+    const cy = padTop + row * cell + cell / 2 - 6;
+    const [, , vw, vh] = icon.viewBox.split(" ").map(Number);
+    const scale = iconSize / Math.max(vw, vh);
+    const delay = (i * 0.045).toFixed(3);
+    content += `<g class="icon" style="animation-delay:${delay}s" transform="translate(${cx}, ${cy})">
+      <rect x="-${cell / 2 - 6}" y="-${cell / 2 - 6}" width="${cell - 12}" height="${cell - 12}" rx="12" fill="#161b22"/>
+      <g transform="translate(${-iconSize / 2}, ${-iconSize / 2 - 6}) scale(${scale})" fill="#${icon.fill.replace("#", "")}">${icon.paths}</g>
+      <text x="0" y="${cell / 2 - 14}" text-anchor="middle" class="label">${esc(label)}</text>
+    </g>\n`;
+  });
+
+  return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Linguagens e ferramentas">
+  <style>
+    .icon { opacity: 0; animation: pop 0.4s ease-out forwards; transform-origin: center; }
+    @keyframes pop { 0% { opacity: 0; transform: scale(0.5) translateY(6px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+    .label { font: 500 9px "Cascadia Code","Fira Code",monospace; fill: ${MUTED}; }
+    @media (prefers-reduced-motion: reduce) { .icon { animation: none; opacity: 1; } }
+  </style>
+  <rect width="100%" height="100%" fill="${BG}" rx="10"/>
+  ${content}
+</svg>`;
+}
+
 const contrib = await fetchContributions();
 const profile = await fetchPublicProfile();
+const stackSvg = await buildStackSvg();
 
 mkdirSync(new URL("..", import.meta.url), { recursive: true });
 writeFileSync(new URL("../heatmap.svg", import.meta.url), buildHeatmapSvg(contrib));
 writeFileSync(new URL("../neofetch.svg", import.meta.url), buildNeofetchSvg(contrib, profile));
 writeFileSync(new URL("../header.svg", import.meta.url), buildHeaderSvg());
+writeFileSync(new URL("../stack.svg", import.meta.url), stackSvg);
 
 console.log(`OK — ${contrib.total} contribuições, ${contrib.days.length} dias, repos=${profile.public_repos}`);
