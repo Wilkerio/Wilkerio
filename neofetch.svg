@@ -20,7 +20,7 @@
 <g class="row" style="animation-delay:0.50s"><text x="24" y="154" class="key">infra</text><text x="200" y="154" class="val">Docker · GitHub Actions</text></g>
 <g class="row" style="animation-delay:0.60s"><text x="24" y="178" class="key">seguranca</text><text x="200" y="178" class="val">SAST, secret scan, pentest com IA</text></g>
 <g class="row" style="animation-delay:0.70s"><text x="24" y="202" class="key">repos publicos</text><text x="200" y="202" class="val">11</text></g>
-<g class="row" style="animation-delay:0.80s"><text x="24" y="226" class="key">contribuicoes/ano</text><text x="200" y="226" class="val">3804</text></g>
+<g class="row" style="animation-delay:0.80s"><text x="24" y="226" class="key">contribuicoes/ano</text><text x="200" y="226" class="val">3806</text></g>
 <g class="row" style="animation-delay:0.90s"><text x="24" y="250" class="key">dias ativos/ano</text><text x="200" y="250" class="val">146</text></g>
 <g class="row" style="animation-delay:1.00s"><text x="24" y="274" class="key">streak atual</text><text x="200" y="274" class="val">1 dia</text></g>
   <rect class="cursor" x="24" y="300" width="8" height="14"/>
