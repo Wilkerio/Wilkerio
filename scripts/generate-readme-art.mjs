@@ -95,16 +95,19 @@ function buildNeofetchSvg({ total, days }, profile) {
   }
   const lines = [
     { k: "usuario", v: USER },
-    { k: "stack", v: "TypeScript · React · Node · Python" },
-    { k: "seguranca", v: "SAST, secret scan, pentest com IA" },
+    { k: "linguagens", v: "TypeScript · JavaScript · Python" },
+    { k: "frontend", v: "React · Vite · Tailwind" },
+    { k: "backend/dados", v: "Node.js · Supabase · PostgreSQL" },
     { k: "mobile", v: "React Native / Expo" },
+    { k: "infra", v: "Docker · GitHub Actions" },
+    { k: "seguranca", v: "SAST, secret scan, pentest com IA" },
     { k: "repos publicos", v: String(profile.public_repos) },
     { k: "contribuicoes/ano", v: total },
     { k: "dias ativos/ano", v: String(activeDays) },
     { k: "streak atual", v: `${streak} dia${streak === 1 ? "" : "s"}` },
   ];
 
-  const width = 560;
+  const width = 620;
   const lineHeight = 24;
   const padTop = 34;
   const height = padTop + lines.length * lineHeight + 18;
@@ -130,7 +133,7 @@ function buildNeofetchSvg({ total, days }, profile) {
   </style>
   <rect width="100%" height="100%" fill="${BG}" rx="8"/>
   <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="8" fill="none" stroke="${GOLD_DIM}"/>
-  <text x="24" y="20" class="prompt">wilkerio@gervia:~$ whoami --verbose</text>
+  <text x="24" y="20" class="prompt">wilkerio@dev:~$ whoami --verbose</text>
   ${rows}
   <rect class="cursor" x="24" y="${height - 16}" width="8" height="14"/>
 </svg>`;
@@ -145,29 +148,16 @@ function buildHeaderSvg() {
   const tagline = "full-stack engineer & application security";
   const sub = "Construo o sistema e depois tento invadir ele.";
 
-  const markCharW = 46;
-  const markWidth = mark.length * markCharW;
-  const tagCharW = 11.5;
-  const tagWidth = tagline.length * tagCharW;
-  const subCharW = 10.2;
-  const subWidth = sub.length * subCharW;
-
-  const markDur = 1.1;
-  const tagDelay = markDur + 0.15;
-  const tagDur = tagline.length * 0.028;
-  const subDelay = tagDelay + tagDur + 0.3;
-  const subDur = sub.length * 0.03;
-  const cursorDelay = subDelay + subDur + 0.1;
-
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wilkerio — full-stack engineer e segurança de aplicações">
   <style>
     .bracket { stroke: ${GOLD_DIM}; stroke-width: 2; fill: none; }
-    .mark { font: 700 64px Georgia, "Times New Roman", serif; fill: ${GOLD}; letter-spacing: 4px; }
-    .tag { font: 400 16px "Cascadia Code","Fira Code",monospace; fill: ${INK}; }
-    .sub { font: 400 14px "Cascadia Code","Fira Code",monospace; fill: ${MUTED}; }
-    .cursor { fill: ${GOLD}; opacity: 0; animation: blink 1s step-end infinite; animation-delay: ${cursorDelay}s; }
+    .mark { font: 700 64px Georgia, "Times New Roman", serif; fill: ${GOLD}; letter-spacing: 4px; opacity: 0; animation: reveal 0.6s ease-out forwards; animation-delay: 0.1s; }
+    .tag { font: 400 16px "Cascadia Code","Fira Code",monospace; fill: ${INK}; opacity: 0; animation: reveal 0.5s ease-out forwards; animation-delay: 0.7s; }
+    .sub { font: 400 14px "Cascadia Code","Fira Code",monospace; fill: ${MUTED}; opacity: 0; animation: reveal 0.5s ease-out forwards; animation-delay: 1.1s; }
+    @keyframes reveal { 0% { opacity: 0; transform: translateX(-10px); } 100% { opacity: 1; transform: translateX(0); } }
+    .cursor { fill: ${GOLD}; opacity: 0; animation: blink 1s step-end infinite; animation-delay: 1.5s; }
     @media (prefers-reduced-motion: reduce) {
-      #markClip rect, #tagClip rect, #subClip rect { animation: none !important; width: 2000px !important; }
+      .mark, .tag, .sub { animation: none !important; opacity: 1 !important; }
       .cursor { opacity: 1; animation: blink 1s step-end infinite; }
     }
   </style>
@@ -177,28 +167,10 @@ function buildHeaderSvg() {
   <path class="bracket" d="M 28 24 L 16 24 L 16 ${height - 24} L 28 ${height - 24}"/>
   <path class="bracket" d="M ${width - 28} 24 L ${width - 16} 24 L ${width - 16} ${height - 24} L ${width - 28} ${height - 24}"/>
 
-  <defs>
-    <clipPath id="markClip">
-      <rect x="0" y="0" height="76" width="0">
-        <animate attributeName="width" from="0" to="${markWidth}" begin="0.1s" dur="${markDur}s" fill="freeze" calcMode="ease-out"/>
-      </rect>
-    </clipPath>
-    <clipPath id="tagClip">
-      <rect x="0" y="0" height="24" width="0">
-        <animate attributeName="width" from="0" to="${tagWidth}" begin="${tagDelay}s" dur="${tagDur}s" fill="freeze" calcMode="linear"/>
-      </rect>
-    </clipPath>
-    <clipPath id="subClip">
-      <rect x="0" y="0" height="22" width="0">
-        <animate attributeName="width" from="0" to="${subWidth}" begin="${subDelay}s" dur="${subDur}s" fill="freeze" calcMode="linear"/>
-      </rect>
-    </clipPath>
-  </defs>
-
   <g transform="translate(64, 68)">
-    <text x="0" y="0" class="mark" clip-path="url(#markClip)">${esc(mark)}</text>
-    <text x="0" y="34" class="tag" clip-path="url(#tagClip)">${esc(tagline)}</text>
-    <text x="0" y="64" class="sub" clip-path="url(#subClip)">${esc(sub)}</text>
+    <text x="0" y="0" class="mark">${esc(mark)}</text>
+    <text x="0" y="34" class="tag">${esc(tagline)}</text>
+    <text x="0" y="64" class="sub">${esc(sub)}</text>
     <rect class="cursor" x="0" y="52" width="9" height="16"/>
   </g>
 </svg>`;

@@ -8,7 +8,7 @@
 
 <br>
 
-<img src="https://skillicons.dev/icons?i=ts,react,vite,tailwind,nodejs,python,supabase,docker,expo,git,github,figma&theme=dark" alt="stack" />
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,vite,tailwind,nodejs,python,supabase,postgres,docker,expo,git,github,githubactions,figma,bash,powershell,vscode,linux&theme=dark&perline=11" alt="stack" />
 
 <br><br>
 

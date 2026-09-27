@@ -1,12 +1,13 @@
 <svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wilkerio — full-stack engineer e segurança de aplicações">
   <style>
     .bracket { stroke: #7a6138; stroke-width: 2; fill: none; }
-    .mark { font: 700 64px Georgia, "Times New Roman", serif; fill: #BB9354; letter-spacing: 4px; }
-    .tag { font: 400 16px "Cascadia Code","Fira Code",monospace; fill: #c9d1d9; }
-    .sub { font: 400 14px "Cascadia Code","Fira Code",monospace; fill: #6e7681; }
-    .cursor { fill: #BB9354; opacity: 0; animation: blink 1s step-end infinite; animation-delay: 4.2059999999999995s; }
+    .mark { font: 700 64px Georgia, "Times New Roman", serif; fill: #BB9354; letter-spacing: 4px; opacity: 0; animation: reveal 0.6s ease-out forwards; animation-delay: 0.1s; }
+    .tag { font: 400 16px "Cascadia Code","Fira Code",monospace; fill: #c9d1d9; opacity: 0; animation: reveal 0.5s ease-out forwards; animation-delay: 0.7s; }
+    .sub { font: 400 14px "Cascadia Code","Fira Code",monospace; fill: #6e7681; opacity: 0; animation: reveal 0.5s ease-out forwards; animation-delay: 1.1s; }
+    @keyframes reveal { 0% { opacity: 0; transform: translateX(-10px); } 100% { opacity: 1; transform: translateX(0); } }
+    .cursor { fill: #BB9354; opacity: 0; animation: blink 1s step-end infinite; animation-delay: 1.5s; }
     @media (prefers-reduced-motion: reduce) {
-      #markClip rect, #tagClip rect, #subClip rect { animation: none !important; width: 2000px !important; }
+      .mark, .tag, .sub { animation: none !important; opacity: 1 !important; }
       .cursor { opacity: 1; animation: blink 1s step-end infinite; }
     }
   </style>
@@ -16,28 +17,10 @@
   <path class="bracket" d="M 28 24 L 16 24 L 16 196 L 28 196"/>
   <path class="bracket" d="M 872 24 L 884 24 L 884 196 L 872 196"/>
 
-  <defs>
-    <clipPath id="markClip">
-      <rect x="0" y="0" height="76" width="0">
-        <animate attributeName="width" from="0" to="368" begin="0.1s" dur="1.1s" fill="freeze" calcMode="ease-out"/>
-      </rect>
-    </clipPath>
-    <clipPath id="tagClip">
-      <rect x="0" y="0" height="24" width="0">
-        <animate attributeName="width" from="0" to="483" begin="1.25s" dur="1.176s" fill="freeze" calcMode="linear"/>
-      </rect>
-    </clipPath>
-    <clipPath id="subClip">
-      <rect x="0" y="0" height="22" width="0">
-        <animate attributeName="width" from="0" to="469.2" begin="2.726s" dur="1.38s" fill="freeze" calcMode="linear"/>
-      </rect>
-    </clipPath>
-  </defs>
-
   <g transform="translate(64, 68)">
-    <text x="0" y="0" class="mark" clip-path="url(#markClip)">WILKERIO</text>
-    <text x="0" y="34" class="tag" clip-path="url(#tagClip)">full-stack engineer &amp; application security</text>
-    <text x="0" y="64" class="sub" clip-path="url(#subClip)">Construo o sistema e depois tento invadir ele.</text>
+    <text x="0" y="0" class="mark">WILKERIO</text>
+    <text x="0" y="34" class="tag">full-stack engineer &amp; application security</text>
+    <text x="0" y="64" class="sub">Construo o sistema e depois tento invadir ele.</text>
     <rect class="cursor" x="0" y="52" width="9" height="16"/>
   </g>
 </svg>
