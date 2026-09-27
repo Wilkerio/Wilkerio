@@ -30,10 +30,6 @@
 
 <br><br><br>
 
-<h3><code>wilkerio@dev ~ $ whoami --verbose</code></h3>
-
-<br>
-
 <img src="./neofetch.svg" width="560" alt="Cartão de status" />
 
 <br><br><br>
