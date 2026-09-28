@@ -29,7 +29,7 @@ I turn <strong>business workflows</strong> into <strong>software people can actu
 </a>
 &nbsp;
 <a href="https://www.linkedin.com/in/wilkerweb">
-  <img src="https://img.shields.io/badge/LinkedIn-Wilkerio-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <img src="https://img.shields.io/badge/LinkedIn-Wilkerweb-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
 </a>
 
 <br><br>
