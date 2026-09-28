@@ -117,61 +117,58 @@ Recursos com IA · assistentes · agentes · fluxos inteligentes
 
 ## 🚀 Engenharia de ponta a ponta
 
-<sub>Uma visão completa da engenharia — da interface aos dados, APIs e automações.</sub>
+<sub>Da interface aos dados, APIs, integrações e automações que sustentam o produto.</sub>
 
 </div>
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="25%" valign="top">
 
 ### 🎨 FRONTEND
 
-**Interfaces rápidas, responsivas e orientadas a produto.**
+**Build the experience.**
 
-React · TypeScript · JavaScript · Vite · Tailwind CSS
+React · TypeScript · JavaScript
 
-<sub>Estado · componentes · formulários · validação · data fetching</sub>
+<sub>Vite · Tailwind · State · Components · Forms</sub>
 
 </td>
-<td width="50%" valign="top">
+<td width="25%" valign="top">
 
 ### ⚙️ BACKEND
 
-**APIs e serviços que sustentam o produto.**
+**Power the product.**
 
-Node.js · Python · PHP · REST APIs
+Node.js · Python · PHP
 
-<sub>Regras de negócio · integrações · serviços · autenticação</sub>
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🗄️ DATA & ARCHITECTURE
-
-**Dados estruturados para sistemas confiáveis.**
-
-PostgreSQL · Supabase · modelagem · analytics
-
-<sub>Schemas · relacionamentos · queries · persistência</sub>
+<sub>REST APIs · Business logic · Services · Auth</sub>
 
 </td>
-<td width="50%" valign="top">
+<td width="25%" valign="top">
 
-### 🔗 INTEGRATIONS & AUTOMATION
+### 🗄️ DATA
 
-**Sistemas que conversam entre si e eliminam trabalho manual.**
+**Structure the system.**
 
-APIs · webhooks · integrações · automação de processos
+PostgreSQL · Supabase
 
-<sub>Sincronização · orquestração · serviços externos · workflows</sub>
+<sub>Schemas · Relationships · Queries · Analytics</sub>
+
+</td>
+<td width="25%" valign="top">
+
+### 🔗 INTEGRATION
+
+**Connect & automate.**
+
+APIs · Webhooks · Integrations
+
+<sub>Sync · Orchestration · Workflows · External services</sub>
 
 </td>
 </tr>
 </table>
-
 <br>
 
 <div align="center">
