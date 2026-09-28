@@ -10,7 +10,7 @@
     @media (prefers-reduced-motion: reduce) { .seg, .leg { animation: none; opacity: 1; } }
   </style>
   <rect width="100%" height="100%" fill="#0d1117" rx="10"/>
-  <text x="0" y="18" class="title">DISTRIBUIÇÃO DE LINGUAGEM NOS REPOSITÓRIOS (bytes de código real)</text>
+  <text x="0" y="18" class="title">LANGUAGE DISTRIBUTION ACROSS REPOSITORIES (actual code bytes)</text>
   <g clip-path="inset(0 round 4px)">
     <rect x="0" y="36" width="700" height="14" fill="#161b22"/>
     <g transform="translate(0, 36)"><rect class="seg" style="animation-delay:0.00s" width="282.9469452396906" height="14" fill="#3178c6"/></g>
