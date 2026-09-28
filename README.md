@@ -175,20 +175,68 @@ AI features · assistants · agents · intelligent workflows
 
 ## 🔍 How I approach engineering
 
+<sub>A practical engineering workflow — from understanding the problem to evolving the system.</sub>
+
 </div>
 
 <table>
 <tr>
-<td align="center"><strong>01</strong><br><sub>UNDERSTAND</sub></td>
-<td align="center"><strong>02</strong><br><sub>MODEL</sub></td>
-<td align="center"><strong>03</strong><br><sub>BUILD</sub></td>
-<td align="center"><strong>04</strong><br><sub>CONNECT</sub></td>
-<td align="center"><strong>05</strong><br><sub>REFINE</sub></td>
+<td width="33%" valign="top">
+
+### 01 · DISCOVER
+
+Understand the **business problem**, users, constraints and real workflow.
+
+</td>
+<td width="33%" valign="top">
+
+### 02 · ARCHITECT
+
+Define **data models, states, rules, boundaries** and system structure.
+
+</td>
+<td width="33%" valign="top">
+
+### 03 · BUILD
+
+Turn the architecture into **maintainable product code**, reusable components and clear APIs.
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+
+### 04 · INTEGRATE
+
+Connect **APIs, services and workflows** so the system works as one ecosystem.
+
+</td>
+<td width="33%" valign="top">
+
+### 05 · HARDEN
+
+Validate critical flows, improve **reliability, security and quality**, and remove friction.
+
+</td>
+<td width="33%" valign="top">
+
+### 06 · EVOLVE
+
+Monitor, refine and **continuously improve** the system as the product and business change.
+
+</td>
 </tr>
 </table>
 
-**Understand** the real workflow → **Model** data, states and rules → **Build** the product → **Connect** APIs and services → **Refine** the experience and reliability.
+<div align="center">
 
+<strong>Discover</strong> → <strong>Architect</strong> → <strong>Build</strong> → <strong>Integrate</strong> → <strong>Harden</strong> → <strong>Evolve</strong>
+
+<br><br>
+
+<sub><strong>The goal is not just to ship software — it's to build systems that keep working as the business grows.</strong></sub>
+
+</div>
 ---
 
 ## 📂 What's inside this GitHub
