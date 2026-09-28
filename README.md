@@ -75,7 +75,11 @@ Good engineering should remove friction, connect the right systems and make the 
 
 ---
 
-<div align="center">\n\n## 🧩 What I build\n\n</div>
+<div align="center">
+
+## 🧩 What I build
+
+</div>
 
 <table>
 <tr>
@@ -117,7 +121,11 @@ AI features · assistants · agents · intelligent workflows
 
 ---
 
-<div align="center">\n\n## 🚀 Engineering across the stack\n\n</div>
+<div align="center">
+
+## 🚀 Engineering across the stack
+
+</div>
 
 | Layer | What I work with |
 |:--|:--|
@@ -133,7 +141,11 @@ AI features · assistants · agents · intelligent workflows
 
 ---
 
-<div align="center">\n\n## 🔍 How I approach engineering\n\n</div>
+<div align="center">
+
+## 🔍 How I approach engineering
+
+</div>
 
 <table>
 <tr>
