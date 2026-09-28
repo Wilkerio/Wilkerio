@@ -2,15 +2,27 @@
 
 <img src="./header.svg" width="900" alt="Wilkerio — Full-Stack Engineer" />
 
-<br>
+<br><br>
 
-<h2>Building software where <em>technology meets business.</em></h2>
+<h1>Wilkerio</h1>
+
+<h3>Full-Stack Engineer · Business Systems · Automation · AI</h3>
 
 <p>
-Full-Stack Engineering&nbsp;&nbsp;·&nbsp;&nbsp;Business Systems&nbsp;&nbsp;·&nbsp;&nbsp;Automation&nbsp;&nbsp;·&nbsp;&nbsp;AI
+I turn <strong>business workflows</strong> into <strong>software people can actually use.</strong>
 </p>
 
 <br>
+
+<a href="https://github.com/Wilkerio">
+  <img src="https://img.shields.io/badge/GitHub-Wilkerio-111111?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+&nbsp;
+<a href="https://www.upwork.com/freelancers/~01">
+  <img src="https://img.shields.io/badge/Upwork-Available-14a800?style=for-the-badge&logo=upwork&logoColor=white" alt="Upwork" />
+</a>
+
+<br><br>
 
 <img src="./stack.svg" width="756" alt="Languages and tools" />
 
@@ -26,129 +38,168 @@ Full-Stack Engineering&nbsp;&nbsp;·&nbsp;&nbsp;Business Systems&nbsp;&nbsp;·&n
 
 ---
 
-## <img src="https://raw.githubusercontent.com/denvercoder1/readme-typing-svg/main/demo/terminal.gif" width="24"> About me
+## 👋 About
 
-I'm **Wilkerio**, a full-stack engineer focused on building applications that connect **people, data and business processes**.
+I'm **Wilkerio**, a Brazilian full-stack engineer focused on the intersection of:
 
-I like working on the part of software where things get real:
+**software engineering × business operations × automation × product thinking**
 
-> **A business has a problem → the workflow is understood → the system is designed → the software automates it.**
+I enjoy taking something that currently lives in **spreadsheets, repetitive tasks, disconnected tools or manual workflows** and turning it into a structured digital system.
 
-My projects usually sit at the intersection of **product engineering, business software, integrations and automation**.
+### The kind of problem I like
+
+```
+BUSINESS PROBLEM
+      ↓
+UNDERSTAND THE WORKFLOW
+      ↓
+MODEL THE DATA
+      ↓
+DESIGN THE EXPERIENCE
+      ↓
+BUILD THE SYSTEM
+      ↓
+CONNECT APIs & AUTOMATIONS
+      ↓
+DELIVER A USEFUL RESULT
+```
+
+That's the common thread behind the projects on this profile.
 
 ---
 
-## ⚡ What I build
+## 🧩 What I build
 
-| 🧩 Business Systems | ⚙️ Automation | 🧠 AI & Products |
-|:---|:---|:---|
-| CRM & internal platforms | API integrations | AI-enabled applications |
-| Dashboards & operations | Workflow automation | AI agents & assistants |
-| Data management | Process orchestration | Intelligent workflows |
-| Reporting & analytics | External services | Product experiments |
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 🏢 Business Systems
+
+CRM, dashboards, internal platforms and operational software.
+
+**Focus**
+- workflows
+- permissions & data
+- dashboards
+- CRUD / business logic
+- operational interfaces
+
+</td>
+<td width="33%" valign="top">
+
+### ⚙️ Automation
+
+Systems that reduce repetitive work and connect disconnected tools.
+
+**Focus**
+- REST APIs
+- integrations
+- webhooks
+- synchronization
+- workflow orchestration
+
+</td>
+<td width="33%" valign="top">
+
+### 🧠 AI-enabled Software
+
+AI connected to products and real workflows — not isolated demos.
+
+**Focus**
+- AI features
+- assistants
+- agents
+- structured workflows
+- API-based AI
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Engineering across the stack
+
+| Layer | Technologies |
+|:--|:--|
+| **Frontend** | React · TypeScript · JavaScript · Vite · Tailwind CSS |
+| **Backend** | Node.js · Python · PHP · REST APIs |
+| **Data** | PostgreSQL · Supabase · data modeling · analytics |
+| **Application** | React Query · Zod · forms · component systems · testing |
+| **Automation** | APIs · webhooks · integrations · workflow automation |
+| **Web & Commerce** | WordPress · Shopify |
 
 <br>
 
-| 💻 Full-Stack | 📊 Data | 🌐 Web |
-|:---|:---|:---|
-| React + TypeScript | PostgreSQL | WordPress |
-| Node.js + APIs | Supabase | Shopify |
-| Python / PHP | Charts & reporting | Conversion-focused UI |
+> I don't choose a stack just because it's popular.  
+> **The stack should fit the product, the workflow and the constraints.**
 
 ---
 
-## 🛠️ Technology
+## 🔍 How I approach a project
 
-**Frontend**
+**01 — Understand**
 
-`React` `TypeScript` `JavaScript` `Vite` `Tailwind CSS`
+What is the actual problem? Who uses the system? Where does the current workflow break?
 
-**Backend & Data**
+**02 — Model**
 
-`Node.js` `Python` `PHP` `Supabase` `PostgreSQL` `REST APIs`
+Turn requirements into data structures, permissions, states and business rules.
 
-**Engineering**
+**03 — Build**
 
-`Docker` `Git` `React Query` `Zod` `Testing`
+Create the interface, application logic, APIs and database layer as one coherent system.
 
-**Automation & AI**
+**04 — Connect**
 
-`API Integrations` `Workflow Automation` `AI Applications` `Agents`
+Integrate external services, automation, webhooks and the tools the business already uses.
 
----
+**05 — Refine**
 
-## 🚀 What you'll find here
-
-This profile is a mix of **real products, experiments, prototypes and engineering studies**.
-
-### 🏢 Business software
-Systems designed around operational workflows, structured data, dashboards, CRM concepts and internal processes.
-
-### 📈 Data-driven applications
-Interfaces that turn complex information into searchable, filterable and actionable views.
-
-### 🤖 Automation & AI
-Projects exploring how automation and AI can become part of an actual workflow — not just a standalone demo.
-
-### 🧱 Product engineering
-End-to-end work across interface, application logic, data, APIs and integrations.
-
-> Some projects remain private because they contain client or proprietary material. The public repositories are the work I can responsibly share.
+Improve usability, reliability, maintainability and the parts that matter to the operation.
 
 ---
 
-## 🧠 How I think about software
+## 📂 What's inside this GitHub
 
-```
-        PROBLEM
-           │
-           ▼
-       WORKFLOW
-           │
-           ▼
-       DATA MODEL
-           │
-           ▼
-      APPLICATION
-           │
-      ┌────┴────┐
-      ▼         ▼
-   APIs      AUTOMATION
-      │         │
-      └────┬────┘
-           ▼
-        RESULT
-```
+<table>
+<tr>
+<td><strong>🟢 Public</strong><br><sub>Projects I can openly showcase</sub></td>
+<td><strong>🧪 Experiments</strong><br><sub>Ideas, prototypes & technical exploration</sub></td>
+<td><strong>🔒 Private</strong><br><sub>Client & proprietary systems</sub></td>
+</tr>
+</table>
 
-**Good software isn't just technically impressive.**
+The public repositories are only part of the picture. Some professional work cannot be published because it involves private business logic, client data or proprietary systems.
 
-It should make a process **clearer, faster, more reliable or easier to operate.**
+**The goal here is not to publish everything. It's to publish the right things.**
 
 ---
 
-## 🎯 Current focus
+## 🎯 Current direction
 
 <div align="center">
 
-```
-FULL-STACK
-    +
-BUSINESS SYSTEMS
-    +
-AUTOMATION
-    +
-AI
-```
+<h2>FULL-STACK ENGINEERING</h2>
+
+<p>↓</p>
+
+<h3>BUSINESS SYSTEMS</h3>
+
+<p>↓</p>
+
+<h3>AUTOMATION + AI</h3>
 
 <br>
 
-**Building systems that move real work forward.**
+<strong>Software that turns real processes into scalable systems.</strong>
 
 </div>
 
 ---
 
-## 📊 GitHub activity
+## 📊 Activity
 
 <div align="center">
 
@@ -158,7 +209,7 @@ AI
 
 <br><br>
 
-<sub>Brazil · Full-Stack Engineering · Business Systems · Automation</sub>
+<sub>🇧🇷 Brazil · Building systems, products and automations</sub>
 
 </div>
 
@@ -166,6 +217,12 @@ AI
 
 <div align="center">
 
-<sub>Design systems. Build products. Automate workflows. Keep improving.</sub>
+<br>
+
+<strong>Build the interface. Connect the systems. Automate the workflow.</strong>
+
+<br><br>
+
+<sub>Full-Stack Engineering · Business Systems · Automation · AI</sub>
 
 </div>
