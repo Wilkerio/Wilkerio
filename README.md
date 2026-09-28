@@ -40,11 +40,15 @@ I turn <strong>business workflows</strong> into <strong>software people can actu
 
 ---
 
+<div align="center">
+
 ## 👋 About
 
 I'm **Wilkerio**, a Brazilian full-stack engineer who builds software at the intersection of **business, data and automation**.
 
 I focus on turning complex or manual operations into **clear, reliable digital systems** — from the interface people use to the APIs, data layer and integrations behind it.
+
+</div>
 
 <table>
 <tr>
@@ -71,7 +75,7 @@ Good engineering should remove friction, connect the right systems and make the 
 
 ---
 
-## 🧩 What I build
+<div align="center">\n\n## 🧩 What I build\n\n</div>
 
 <table>
 <tr>
@@ -113,7 +117,7 @@ AI features · assistants · agents · intelligent workflows
 
 ---
 
-## 🚀 Engineering across the stack
+<div align="center">\n\n## 🚀 Engineering across the stack\n\n</div>
 
 | Layer | What I work with |
 |:--|:--|
@@ -129,7 +133,7 @@ AI features · assistants · agents · intelligent workflows
 
 ---
 
-## 🔍 How I approach engineering
+<div align="center">\n\n## 🔍 How I approach engineering\n\n</div>
 
 <table>
 <tr>
