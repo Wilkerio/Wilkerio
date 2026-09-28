@@ -30,11 +30,11 @@ I turn <strong>business workflows</strong> into <strong>software people can actu
 
 <br><br>
 
-<img src="./languages.svg" width="700" alt="Language distribution across public repositories" />
+<img src="./languages-en.svg" width="700" alt="Language distribution across public repositories" />
 
 <br>
 
-<img src="./badges.svg" width="800" alt="Security and AI" />
+<img src="./badges-en.svg" width="800" alt="Security and AI" />
 
 </div>
 
