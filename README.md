@@ -133,61 +133,58 @@ AI features · assistants · agents · intelligent workflows
 
 ## 🚀 Engineering across the stack
 
-<sub>A complete view of engineering — from the interface to data, APIs and automation.</sub>
+<sub>From the interface to the data, APIs, integrations and automation behind the product.</sub>
 
 </div>
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="25%" valign="top">
 
 ### 🎨 FRONTEND
 
-**Fast, responsive, product-focused interfaces.**
+**Build the experience.**
 
-React · TypeScript · JavaScript · Vite · Tailwind CSS
+React · TypeScript · JavaScript
 
-<sub>State · components · forms · validation · data fetching</sub>
+<sub>Vite · Tailwind · State · Components · Forms</sub>
 
 </td>
-<td width="50%" valign="top">
+<td width="25%" valign="top">
 
 ### ⚙️ BACKEND
 
-**APIs and services that power the product.**
+**Power the product.**
 
-Node.js · Python · PHP · REST APIs
+Node.js · Python · PHP
 
-<sub>Business logic · integrations · services · authentication</sub>
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🗄️ DATA & ARCHITECTURE
-
-**Structured data for reliable systems.**
-
-PostgreSQL · Supabase · data modeling · analytics
-
-<sub>Schemas · relationships · queries · persistence</sub>
+<sub>REST APIs · Business logic · Services · Auth</sub>
 
 </td>
-<td width="50%" valign="top">
+<td width="25%" valign="top">
 
-### 🔗 INTEGRATIONS & AUTOMATION
+### 🗄️ DATA
 
-**Systems that communicate and eliminate manual work.**
+**Structure the system.**
 
-APIs · webhooks · integrations · workflow automation
+PostgreSQL · Supabase
 
-<sub>Synchronization · orchestration · external services · workflows</sub>
+<sub>Schemas · Relationships · Queries · Analytics</sub>
+
+</td>
+<td width="25%" valign="top">
+
+### 🔗 INTEGRATION
+
+**Connect & automate.**
+
+APIs · Webhooks · Integrations
+
+<sub>Sync · Orchestration · Workflows · External services</sub>
 
 </td>
 </tr>
 </table>
-
 <br>
 
 <div align="center">
