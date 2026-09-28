@@ -32,11 +32,15 @@ Transformo <strong>processos de negócio</strong> em <strong>software que as pes
 
 ---
 
+<div align="center">
+
 ## 👋 Sobre mim
 
 Sou **Wilkerio**, engenheiro full-stack brasileiro que desenvolve software na interseção entre **negócios, dados e automação**.
 
 Meu foco é transformar operações complexas ou manuais em **sistemas digitais claros, confiáveis e estruturados** — da interface utilizada pelas pessoas às APIs, dados e integrações que sustentam o produto.
+
+</div>
 
 <table>
 <tr>
@@ -63,7 +67,7 @@ Boa engenharia deve reduzir atrito, conectar os sistemas certos e tornar o proce
 
 ---
 
-## 🧩 O que eu construo
+<div align="center">\n\n## 🧩 O que eu construo\n\n</div>
 
 <table>
 <tr>
@@ -105,7 +109,7 @@ Recursos com IA · assistentes · agentes · fluxos inteligentes
 
 ---
 
-## 🚀 Engenharia de ponta a ponta
+<div align="center">\n\n## 🚀 Engenharia de ponta a ponta\n\n</div>
 
 | Camada | Com o que trabalho |
 |:--|:--|
@@ -121,7 +125,7 @@ Recursos com IA · assistentes · agentes · fluxos inteligentes
 
 ---
 
-## 🔍 Como abordo a engenharia
+<div align="center">\n\n## 🔍 Como abordo a engenharia\n\n</div>
 
 <table>
 <tr>
