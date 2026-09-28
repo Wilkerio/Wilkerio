@@ -8,6 +8,8 @@
 
 <h3>Full-Stack Engineer · Business Systems · Automation · AI</h3>
 
+<p><a href="./README.pt-BR.md">🇧🇷 Read in Portuguese</a></p>
+
 <p>
 I turn <strong>business workflows</strong> into <strong>software people can actually use.</strong>
 </p>
