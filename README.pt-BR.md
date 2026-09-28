@@ -67,7 +67,11 @@ Boa engenharia deve reduzir atrito, conectar os sistemas certos e tornar o proce
 
 ---
 
-<div align="center">\n\n## 🧩 O que eu construo\n\n</div>
+<div align="center">
+
+## 🧩 O que eu construo
+
+</div>
 
 <table>
 <tr>
@@ -109,7 +113,11 @@ Recursos com IA · assistentes · agentes · fluxos inteligentes
 
 ---
 
-<div align="center">\n\n## 🚀 Engenharia de ponta a ponta\n\n</div>
+<div align="center">
+
+## 🚀 Engenharia de ponta a ponta
+
+</div>
 
 | Camada | Com o que trabalho |
 |:--|:--|
@@ -125,7 +133,11 @@ Recursos com IA · assistentes · agentes · fluxos inteligentes
 
 ---
 
-<div align="center">\n\n## 🔍 Como abordo a engenharia\n\n</div>
+<div align="center">
+
+## 🔍 Como abordo a engenharia
+
+</div>
 
 <table>
 <tr>
