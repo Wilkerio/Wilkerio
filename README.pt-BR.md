@@ -117,7 +117,7 @@ Recursos com IA · assistentes · agentes · fluxos inteligentes
 
 ## 🚀 Engenharia de ponta a ponta
 
-<sub>Da interface aos dados, APIs, integrações e automações que sustentam o produto.</sub>
+<sub>Da interface aos serviços, dados, integrações e processos que fazem o produto funcionar.</sub>
 
 </div>
 
@@ -127,48 +127,58 @@ Recursos com IA · assistentes · agentes · fluxos inteligentes
 
 ### 🎨 FRONTEND
 
-**Build the experience.**
+**Shape the experience**
 
 React · TypeScript · JavaScript
 
-<sub>Vite · Tailwind · State · Components · Forms</sub>
+<sub>Vite · Tailwind · Components · Forms · Validation · State</sub>
 
 </td>
 <td width="25%" valign="top">
 
 ### ⚙️ BACKEND
 
-**Power the product.**
+**Power the product**
 
 Node.js · Python · PHP
 
-<sub>REST APIs · Business logic · Services · Auth</sub>
+<sub>REST APIs · Business logic · Services · Authentication</sub>
 
 </td>
 <td width="25%" valign="top">
 
 ### 🗄️ DATA
 
-**Structure the system.**
+**Structure the system**
 
 PostgreSQL · Supabase
 
-<sub>Schemas · Relationships · Queries · Analytics</sub>
+<sub>Schemas · Queries · Relationships · Persistence · Analytics</sub>
 
 </td>
 <td width="25%" valign="top">
 
-### 🔗 INTEGRATION
+### 🔗 INTEGRATIONS
 
-**Connect & automate.**
+**Connect the ecosystem**
 
 APIs · Webhooks · Integrations
 
-<sub>Sync · Orchestration · Workflows · External services</sub>
+<sub>Automation · Sync · Workflows · Orchestration · External services</sub>
 
 </td>
 </tr>
 </table>
+
+<div align="center">
+
+<strong>Interface</strong> → <strong>Application</strong> → <strong>Data</strong> → <strong>Integration</strong>
+
+<br><br>
+
+<sub><strong>The stack follows the product.</strong> I engineer across the layers that turn an idea into a working system.</sub>
+
+</div>
 <br>
 
 <div align="center">
