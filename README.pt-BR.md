@@ -117,42 +117,141 @@ Recursos com IA · assistentes · agentes · fluxos inteligentes
 
 ## 🚀 Engenharia de ponta a ponta
 
+<sub>Uma visão completa da engenharia — da interface aos dados, APIs e automações.</sub>
+
 </div>
 
-| Camada | Com o que trabalho |
-|:--|:--|
-| **Frontend** | React · TypeScript · JavaScript · Vite · Tailwind CSS |
-| **Backend** | Node.js · Python · PHP · APIs REST |
-| **Dados** | PostgreSQL · Supabase · modelagem de dados · analytics |
-| **Aplicação** | React Query · Zod · sistemas de componentes · formulários · testes |
-| **Automação** | APIs · webhooks · integrações · automação de processos |
-| **Web e Comércio** | WordPress · Shopify |
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🎨 FRONTEND
+
+**Interfaces rápidas, responsivas e orientadas a produto.**
+
+React · TypeScript · JavaScript · Vite · Tailwind CSS
+
+<sub>Estado · componentes · formulários · validação · data fetching</sub>
+
+</td>
+<td width="50%" valign="top">
+
+### ⚙️ BACKEND
+
+**APIs e serviços que sustentam o produto.**
+
+Node.js · Python · PHP · REST APIs
+
+<sub>Regras de negócio · integrações · serviços · autenticação</sub>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🗄️ DATA & ARCHITECTURE
+
+**Dados estruturados para sistemas confiáveis.**
+
+PostgreSQL · Supabase · modelagem · analytics
+
+<sub>Schemas · relacionamentos · queries · persistência</sub>
+
+</td>
+<td width="50%" valign="top">
+
+### 🔗 INTEGRATIONS & AUTOMATION
+
+**Sistemas que conversam entre si e eliminam trabalho manual.**
+
+APIs · webhooks · integrações · automação de processos
+
+<sub>Sincronização · orquestração · serviços externos · workflows</sub>
+
+</td>
+</tr>
+</table>
 
 <br>
 
-### 🏗️ Capacidades de engenharia
-
-| Área | Foco |
-|:--|:--|
-| **Engenharia de Produto** | Regras de negócio · componentes reutilizáveis · interfaces responsivas · fluxos de aplicação |
-| **APIs e Integrações** | APIs REST · webhooks · serviços externos · sincronização de dados |
-| **Dados e Arquitetura** | PostgreSQL · Supabase · schemas · relacionamentos · queries · analytics |
-| **Arquitetura Frontend** | Estado em React · busca de dados · validação · formulários · sistemas de componentes |
-| **Arquitetura Backend** | Node.js · Python · PHP · camadas de API · integrações de serviços |
-| **Automação e IA** | Automação de processos · recursos com IA · assistentes · agentes · processos estruturados |
-| **Entrega e Qualidade** | Testes · validação · código sustentável · desenvolvimento orientado à segurança |
-
-### 🔄 Da ideia ao sistema
-
 <div align="center">
 
-<strong>Problema de negócio</strong> → <strong>Arquitetura</strong> → <strong>Implementação</strong> → <strong>Integração</strong> → <strong>Dados</strong> → <strong>Automação</strong> → <strong>Produto</strong>
+### 🧠 CAPABILITIES
 
 </div>
 
-> **A stack segue o problema.**  
-> Escolho tecnologias de acordo com o produto, o processo e as restrições — e não o contrário.
+<table>
+<tr>
+<td width="33%" valign="top">
 
+**Product Engineering**
+
+Regras de negócio · componentes reutilizáveis · interfaces responsivas · fluxos de aplicação
+
+</td>
+<td width="33%" valign="top">
+
+**API & Integration**
+
+APIs REST · webhooks · serviços externos · sincronização de dados
+
+</td>
+<td width="33%" valign="top">
+
+**Frontend Architecture**
+
+Estado · data fetching · validação · formulários · component systems
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+
+**Backend Architecture**
+
+Node.js · Python · PHP · camadas de API · integrações
+
+</td>
+<td width="33%" valign="top">
+
+**Automation & AI**
+
+Automação · recursos com IA · assistentes · agentes · processos estruturados
+
+</td>
+<td width="33%" valign="top">
+
+**Delivery & Quality**
+
+Testes · validação · código sustentável · segurança · confiabilidade
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<div align="center">
+
+### 🔄 FROM IDEA TO SYSTEM
+
+<strong>Problem</strong>
+&nbsp;→&nbsp;
+<strong>Architecture</strong>
+&nbsp;→&nbsp;
+<strong>Build</strong>
+&nbsp;→&nbsp;
+<strong>Integrate</strong>
+&nbsp;→&nbsp;
+<strong>Automate</strong>
+&nbsp;→&nbsp;
+<strong>Scale</strong>
+
+<br><br>
+
+<sub><strong>The stack follows the problem.</strong> I choose technologies according to the product, workflow and constraints — not the other way around.</sub>
+
+</div>
 ---
 
 <div align="center">
