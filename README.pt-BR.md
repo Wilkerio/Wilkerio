@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./header.svg" width="900" alt="Wilkerio — Engenheiro Full-Stack" />
+<img src="./header-pt-BR.svg" width="900" alt="Wilkerio — Engenheiro Full-Stack" />
 
 <br><br>
 
@@ -22,11 +22,11 @@ Transformo <strong>processos de negócio</strong> em <strong>software que as pes
 
 <br><br>
 
-<img src="./languages.svg" width="700" alt="Distribuição das linguagens nos repositórios públicos" />
+<img src="./languages-pt-BR.svg" width="700" alt="Distribuição das linguagens nos repositórios públicos" />
 
 <br>
 
-<img src="./badges.svg" width="800" alt="Segurança e inteligência artificial" />
+<img src="./badges-pt-BR.svg" width="800" alt="Segurança e inteligência artificial" />
 
 </div>
 
