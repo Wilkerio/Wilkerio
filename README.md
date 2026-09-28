@@ -17,22 +17,18 @@ I turn <strong>business workflows</strong> into <strong>software people can actu
 <br>
 
 <a href="https://github.com/Wilkerio">
-  <img src="https://cdn.simpleicons.org/github/white" width="22" alt="GitHub" />
   <img src="https://img.shields.io/badge/GitHub-Wilkerio-111111?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
 </a>
 &nbsp;
 <a href="https://www.upwork.com/freelancers/~01">
-  <img src="https://cdn.simpleicons.org/upwork/white" width="22" alt="Upwork" />
   <img src="https://img.shields.io/badge/Upwork-Available-14a800?style=for-the-badge&logo=upwork&logoColor=white" alt="Upwork" />
 </a>
 &nbsp;
 <a href="https://www.workana.com/freelancer/2544f3280e4cff66b6f68d4bec4a2b88">
-  <img src="https://cdn.simpleicons.org/workana/white" width="22" alt="Workana" />
   <img src="https://img.shields.io/badge/Workana-Profile-00a650?style=for-the-badge&logo=workana&logoColor=white" alt="Workana" />
 </a>
 &nbsp;
 <a href="https://www.linkedin.com/in/wilkerweb">
-  <img src="https://cdn.simpleicons.org/linkedin/white" width="22" alt="LinkedIn" />
   <img src="https://img.shields.io/badge/LinkedIn-Wilkerio-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
 </a>
 
