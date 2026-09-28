@@ -2,7 +2,7 @@
   <style>
     .eyebrow { font: 600 11px "Cascadia Code","Fira Code",monospace; fill: #7a6138; letter-spacing: 2px; }
     .bl { font: 600 12px "Cascadia Code","Fira Code",monospace; fill: #c9d1d9; }
-    .bs { font: 400 11px "Cascadia Code","Fira Code",monospace; fill: #6e7681; }
+    .bs { font: 400 10px "Cascadia Code","Fira Code",monospace; fill: #6e7681; }
     .badge { opacity: 0; animation: pop 0.3s ease-out forwards; transform-origin: center; }
     @keyframes pop { 0% { opacity: 0; transform: scale(0.85); } 100% { opacity: 1; transform: scale(1); } }
     @media (prefers-reduced-motion: reduce) { .badge { animation: none; opacity: 1; } }
@@ -22,7 +22,7 @@
           <rect width="172.6" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
           <circle cx="17" cy="15" r="3.5" fill="#BB9354"/>
           <text x="29" y="19" class="bl">gitleaks</text>
-          <text x="92.6" y="19" class="bs">análise de segredos</text>
+          <text x="92.6" y="19" class="bs">segredos</text>
         </g>
         </g>
 <g transform="translate(359.9, 22)">
@@ -30,7 +30,7 @@
           <rect width="146.2" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
           <circle cx="17" cy="15" r="3.5" fill="#0B2A52"/>
           <text x="29" y="19" class="bl">Nuclei</text>
-          <text x="78.19999999999999" y="19" class="bs">análise de vulnerabilidades</text>
+          <text x="78.19999999999999" y="19" class="bs">vulnerabilidades</text>
         </g>
         </g>
 <g transform="translate(516.0999999999999, 22)">
@@ -38,7 +38,7 @@
           <rect width="145" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
           <circle cx="17" cy="15" r="3.5" fill="#BB9354"/>
           <text x="29" y="19" class="bl">Strix</text>
-          <text x="71" y="19" class="bs">pentest com IA</text>
+          <text x="71" y="19" class="bs">pentest IA</text>
         </g>
         </g>
 <g transform="translate(671.0999999999999, 22)">
