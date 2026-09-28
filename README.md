@@ -203,7 +203,7 @@ The public repositories are only part of the picture. Some professional work can
 
 <div align="center">
 
-<h3><code>wilkerio@dev ~ $ ./contribuicoes.sh</code></h3>
+<h3><code>wilkerio@dev ~ $ ./contributions.sh</code></h3>
 
 <img src="./heatmap.svg" width="782" alt="Contribution heatmap" />
 
