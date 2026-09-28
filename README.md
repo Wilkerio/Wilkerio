@@ -345,6 +345,75 @@ Monitor, refine and **continuously improve** the system as the product and busin
 </div>
 ---
 
+---
+
+<div align="center">
+
+## ⭐ Selected Work
+
+<sub>A curated selection of public projects that represent the kind of engineering I like to build.</sub>
+
+</div>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🎮 [Warhex.io](https://github.com/wilkerio/Warhex.io)
+
+**Real-time multiplayer game engineering.**
+
+A public game project covering client-side gameplay, server architecture and the systems required to run a multiplayer experience.
+
+**Focus:** Real-time systems · Game architecture · Networking
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 [Commercial Dashboard](https://github.com/wilkerio/jean)
+
+**Business data → operational dashboard.**
+
+Full-stack dashboard with sales operations, data synchronization, APIs and a persistent data layer built around Supabase/PostgreSQL.
+
+**Focus:** React · Node.js · Supabase · APIs · Data
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 📡 [OutdoorScan](https://github.com/wilkerio/outdoorscamv1)
+
+**Public product experiment.**
+
+A compact public project that demonstrates product-oriented development and technical exploration beyond standard CRUD applications.
+
+**Focus:** Product engineering · Interfaces · Technical exploration
+
+</td>
+<td width="50%" valign="top">
+
+### 🛡️ [Evil-sio-](https://github.com/wilkerio/Evil-sio-)
+
+**Security-oriented engineering project.**
+
+A public security-focused codebase included to show another side of my engineering work: thinking about how systems can be tested, hardened and broken responsibly.
+
+**Focus:** Security · Application testing · Engineering quality
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+<sub>More public projects are available in the repositories below. Some professional work remains private by design.</sub>
+
+</div>
+
+---
+
 ## 📂 What's inside this GitHub
 
 <div align="center">
