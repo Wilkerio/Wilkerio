@@ -16,8 +16,8 @@ I turn <strong>business workflows</strong> into <strong>software people can actu
 
 <br>
 
-<a href="https://github.com/Wilker">
-  <img src="https://img.shields.io/badge/GitHub-Wilker-111111?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+<a href="https://github.com/wilkerio">
+  <img src="https://img.shields.io/badge/GitHub-Wilkerrio-111111?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
 </a>
 &nbsp;
 <a href="https://www.upwork.com/freelancers/~01">
