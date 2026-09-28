@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="./header-pt-BR.svg" width="900" alt="Wilkerio — Engenheiro Full-Stack" />
+<img src="./header-pt-BR.svg" width="900" alt="Wilker — Engenheiro Full-Stack" />
 
 <br><br>
 
-<h1>Wilkerio</h1>
+<h1>Wilker</h1>
 
 <h3>Engenheiro Full-Stack · Sistemas de Negócios · Automação · IA</h3>
 
@@ -36,7 +36,7 @@ Transformo <strong>processos de negócio</strong> em <strong>software que as pes
 
 ## 👋 Sobre mim
 
-Sou **Wilkerio**, engenheiro full-stack brasileiro que desenvolve software na interseção entre **negócios, dados e automação**.
+Sou **Wilker**, engenheiro full-stack brasileiro que desenvolve software na interseção entre **negócios, dados e automação**.
 
 Meu foco é transformar operações complexas ou manuais em **sistemas digitais claros, confiáveis e estruturados** — da interface utilizada pelas pessoas às APIs, dados e integrações que sustentam o produto.
 
