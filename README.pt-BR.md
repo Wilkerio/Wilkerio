@@ -159,20 +159,68 @@ Recursos com IA · assistentes · agentes · fluxos inteligentes
 
 ## 🔍 Como abordo a engenharia
 
+<sub>Um processo prático de engenharia — do entendimento do problema à evolução do sistema.</sub>
+
 </div>
 
 <table>
 <tr>
-<td align="center"><strong>01</strong><br><sub>ENTENDER</sub></td>
-<td align="center"><strong>02</strong><br><sub>MODELAR</sub></td>
-<td align="center"><strong>03</strong><br><sub>CONSTRUIR</sub></td>
-<td align="center"><strong>04</strong><br><sub>CONECTAR</sub></td>
-<td align="center"><strong>05</strong><br><sub>REFINAR</sub></td>
+<td width="33%" valign="top">
+
+### 01 · DESCOBRIR
+
+Entender o **problema de negócio**, usuários, restrições e processo real.
+
+</td>
+<td width="33%" valign="top">
+
+### 02 · ARQUITETAR
+
+Definir **modelos de dados, estados, regras, limites** e estrutura do sistema.
+
+</td>
+<td width="33%" valign="top">
+
+### 03 · CONSTRUIR
+
+Transformar a arquitetura em **código sustentável**, componentes reutilizáveis e APIs claras.
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+
+### 04 · INTEGRAR
+
+Conectar **APIs, serviços e processos** para fazer o ecossistema funcionar como um só.
+
+</td>
+<td width="33%" valign="top">
+
+### 05 · FORTALECER
+
+Validar fluxos críticos, melhorar **confiabilidade, segurança e qualidade** e remover atritos.
+
+</td>
+<td width="33%" valign="top">
+
+### 06 · EVOLUIR
+
+Monitorar, refinar e **melhorar continuamente** o sistema conforme produto e negócio mudam.
+
+</td>
 </tr>
 </table>
 
-**Entender** o processo real → **Modelar** dados, estados e regras → **Construir** o produto → **Conectar** APIs e serviços → **Refinar** experiência e confiabilidade.
+<div align="center">
 
+<strong>Descobrir</strong> → <strong>Arquitetar</strong> → <strong>Construir</strong> → <strong>Integrar</strong> → <strong>Fortalecer</strong> → <strong>Evoluir</strong>
+
+<br><br>
+
+<sub><strong>O objetivo não é apenas entregar software — é construir sistemas que continuem funcionando conforme o negócio cresce.</strong></sub>
+
+</div>
 ---
 
 ## 📂 O que existe neste GitHub
