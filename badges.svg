@@ -1,14 +1,14 @@
-<svg width="860" height="198" viewBox="0 0 860 198" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Security and AI">
+<svg width="860" height="198" viewBox="0 0 860 198" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Segurança e IA">
   <style>
     .eyebrow { font: 600 11px "Cascadia Code","Fira Code",monospace; fill: #7a6138; letter-spacing: 2px; }
     .bl { font: 600 12px "Cascadia Code","Fira Code",monospace; fill: #c9d1d9; }
-    .bs { font: 400 10px "Cascadia Code","Fira Code",monospace; fill: #6e7681; }
+    .bs { font: 400 11px "Cascadia Code","Fira Code",monospace; fill: #6e7681; }
     .badge { opacity: 0; animation: pop 0.3s ease-out forwards; transform-origin: center; }
     @keyframes pop { 0% { opacity: 0; transform: scale(0.85); } 100% { opacity: 1; transform: scale(1); } }
     @media (prefers-reduced-motion: reduce) { .badge { animation: none; opacity: 1; } }
   </style>
   <rect width="100%" height="100%" fill="#0d1117" rx="10"/>
-  <text x="430" y="14" text-anchor="middle" class="eyebrow">SECURITY</text>
+  <text x="430" y="14" text-anchor="middle" class="eyebrow">SEGURANÇA</text>
 <g transform="translate(43.89999999999998, 22)">
         <g class="badge" style="animation-delay:0.00s">
           <rect width="123.4" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
@@ -65,7 +65,7 @@
           <text x="56.599999999999994" y="19" class="bs">multi-tenant</text>
         </g>
         </g>
-<text x="430" y="150" text-anchor="middle" class="eyebrow">ARTIFICIAL INTELLIGENCE</text>
+<text x="430" y="150" text-anchor="middle" class="eyebrow">INTELIGÊNCIA ARTIFICIAL</text>
 <g transform="translate(265.6, 158)">
         <g class="badge" style="animation-delay:0.32s">
           <rect width="188.2" height="30" rx="15" fill="none" stroke="#7a6138" stroke-width="1.2"/>
