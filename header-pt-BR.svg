@@ -1,0 +1,69 @@
+<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wilkerio — Engenheiro Full-Stack e Segurança de Aplicações">
+  <defs>
+    <radialGradient id="glow" cx="30%" cy="38%" r="75%">
+      <stop offset="0%" stop-color="#2a2010" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#0d1117" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </radialGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#BB9354" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#BB9354" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="divider" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a6138" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7a6138" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#7a6138" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .bracket { stroke: #7a6138; stroke-width: 2; fill: none; }
+    .dot { opacity: 0.85; }
+    .mark { font: 700 66px Georgia, "Times New Roman", serif; fill: #BB9354; letter-spacing: 4px; opacity: 0; animation: reveal 0.25s ease-out forwards; animation-delay: 0.05s; }
+    .tag { font: 400 16px "Cascadia Code","Fira Code",monospace; fill: #c9d1d9; opacity: 0; animation: reveal 0.2s ease-out forwards; animation-delay: 0.2s; }
+    .sub { font: 400 14px "Cascadia Code","Fira Code",monospace; fill: #6e7681; opacity: 0; animation: reveal 0.2s ease-out forwards; animation-delay: 0.32s; }
+    @keyframes reveal { 0% { opacity: 0; transform: translateX(-6px); } 100% { opacity: 1; transform: translateX(0); } }
+    .rule-anim { transform-origin: left; transform: scaleX(0); animation: growRule 0.5s ease-out forwards; animation-delay: 0.4s; }
+    @keyframes growRule { to { transform: scaleX(1); } }
+    .cursor { fill: #BB9354; opacity: 0; animation: blink 1s step-end infinite; animation-delay: 0.5s; }
+    .eyebrow { font: 600 11px "Cascadia Code","Fira Code",monospace; fill: #7a6138; letter-spacing: 2px; opacity: 0; animation: reveal 0.2s ease-out forwards; animation-delay: 0.48s; }
+    .focus-row { opacity: 0; animation: reveal 0.25s ease-out forwards; }
+    .focus-mark { font: 600 13px "Cascadia Code","Fira Code",monospace; fill: #BB9354; }
+    .focus { font: 400 13px "Cascadia Code","Fira Code",monospace; fill: #c9d1d9; }
+    @media (prefers-reduced-motion: reduce) {
+      .mark, .tag, .sub, .eyebrow, .focus-row { animation: none !important; opacity: 1 !important; }
+      .rule-anim { animation: none !important; transform: scaleX(1); }
+      .cursor { opacity: 1; animation: blink 1s step-end infinite; }
+    }
+  </style>
+  <rect width="100%" height="100%" fill="url(#glow)" rx="10"/>
+
+  <!-- pontos de janela de terminal -->
+  <circle class="dot" cx="44" cy="40" r="5" fill="#7a6138"/>
+  <circle class="dot" cx="62" cy="40" r="5" fill="#173F73"/>
+  <circle class="dot" cx="80" cy="40" r="5" fill="#BB9354"/>
+
+  <!-- moldura estilo terminal -->
+  <path class="bracket" d="M 28 24 L 16 24 L 16 196 L 28 196"/>
+  <path class="bracket" d="M 872 24 L 884 24 L 884 196 L 872 196"/>
+
+  <!-- divisor central -->
+  <rect x="528" y="30" width="1" height="160" fill="url(#divider)"/>
+
+  <g transform="translate(568, 78)">
+    <text x="0" y="0" class="eyebrow">FOCO</text>
+    <g transform="translate(0, 22)">
+      <g class="focus-row" style="animation-delay:0.55s"><text x="0" y="0" class="focus-mark">›</text><text x="16" y="0" class="focus">SaaS multi-tenant (Supabase / RLS)</text></g>
+<g class="focus-row" style="animation-delay:0.65s"><text x="0" y="26" class="focus-mark">›</text><text x="16" y="26" class="focus">Pentest com IA (Strix)</text></g>
+<g class="focus-row" style="animation-delay:0.75s"><text x="0" y="52" class="focus-mark">›</text><text x="16" y="52" class="focus">CI/CD com gates de segurança</text></g>
+<g class="focus-row" style="animation-delay:0.85s"><text x="0" y="78" class="focus-mark">›</text><text x="16" y="78" class="focus">Full-stack TypeScript / React / Node</text></g>
+    </g>
+  </g>
+
+  <g transform="translate(64, 100)">
+    <text x="0" y="0" class="mark">WILKERIO</text>
+    <rect class="rule-anim" x="0" y="14" width="400" height="2" fill="url(#rule)"/>
+    <text x="0" y="42" class="tag">engenheiro full-stack &amp; segurança de aplicações</text>
+    <text x="0" y="72" class="sub">Eu construo o sistema — depois tento quebrá-lo.</text>
+    <rect class="cursor" x="0" y="60" width="9" height="16"/>
+  </g>
+</svg>
