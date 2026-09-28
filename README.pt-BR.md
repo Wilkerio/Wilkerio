@@ -329,6 +329,75 @@ Monitorar, refinar e **melhorar continuamente** o sistema conforme produto e neg
 </div>
 ---
 
+---
+
+<div align="center">
+
+## ⭐ Projetos em Destaque
+
+<sub>Uma seleção de projetos públicos que representa o tipo de engenharia que gosto de construir.</sub>
+
+</div>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🎮 [Warhex.io](https://github.com/wilkerio/Warhex.io)
+
+**Engenharia de jogo multiplayer em tempo real.**
+
+Projeto público envolvendo gameplay no cliente, arquitetura de servidor e os sistemas necessários para uma experiência multiplayer.
+
+**Foco:** Sistemas em tempo real · Arquitetura de jogos · Networking
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 [Commercial Dashboard](https://github.com/wilkerio/jean)
+
+**Dados de negócio → dashboard operacional.**
+
+Dashboard full-stack com operações comerciais, sincronização de dados, APIs e uma camada persistente baseada em Supabase/PostgreSQL.
+
+**Foco:** React · Node.js · Supabase · APIs · Dados
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 📡 [OutdoorScan](https://github.com/wilkerio/outdoorscamv1)
+
+**Experimento público orientado a produto.**
+
+Projeto público compacto que demonstra desenvolvimento orientado a produto e exploração técnica além de aplicações CRUD tradicionais.
+
+**Foco:** Engenharia de produto · Interfaces · Exploração técnica
+
+</td>
+<td width="50%" valign="top">
+
+### 🛡️ [Evil-sio-](https://github.com/wilkerio/Evil-sio-)
+
+**Projeto de engenharia com foco em segurança.**
+
+Codebase público voltado a segurança, mostrando outro lado da minha engenharia: testar, fortalecer e analisar sistemas de forma responsável.
+
+**Foco:** Segurança · Testes de aplicação · Qualidade de engenharia
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+<sub>Existem outros projetos públicos nos repositórios abaixo. Parte do trabalho profissional permanece privada por escolha.</sub>
+
+</div>
+
+---
+
 ## 📂 O que existe neste GitHub
 
 <div align="center">
