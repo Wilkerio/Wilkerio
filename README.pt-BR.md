@@ -14,7 +14,7 @@ Transformo <strong>processos de negócio</strong> em <strong>software que as pes
 
 <br>
 
-<a href="./README.md">🇺🇸 Read in English</a>
+<a href="./README.md">🇺🇸 Ler em inglês</a>
 
 <br><br>
 
@@ -127,44 +127,44 @@ Recursos com IA · assistentes · agentes · fluxos inteligentes
 
 ### 🎨 FRONTEND
 
-**Shape the experience**
+**Crie a experiência**
 
 React · TypeScript · JavaScript
 
-<sub>Vite · Tailwind · Components · Forms · Validation · State</sub>
+<sub>Vite · Tailwind · Componentes · Formulários · Validação · Estado</sub>
 
 </td>
 <td width="25%" valign="top">
 
 ### ⚙️ BACKEND
 
-**Power the product**
+**Dê potência ao produto**
 
 Node.js · Python · PHP
 
-<sub>REST APIs · Business logic · Services · Authentication</sub>
+<sub>REST APIs · Regras de negócio · Serviços · Autenticação</sub>
 
 </td>
 <td width="25%" valign="top">
 
 ### 🗄️ DATA
 
-**Structure the system**
+**Estruture o sistema**
 
 PostgreSQL · Supabase
 
-<sub>Schemas · Queries · Relationships · Persistence · Analytics</sub>
+<sub>Schemas · Consultas · Relacionamentos · Persistência · Analytics</sub>
 
 </td>
 <td width="25%" valign="top">
 
 ### 🔗 INTEGRATIONS
 
-**Connect the ecosystem**
+**Conecte o ecossistema**
 
-APIs · Webhooks · Integrations
+APIs · Webhooks · Integrações
 
-<sub>Automation · Sync · Workflows · Orchestration · External services</sub>
+<sub>Automação · Sincronização · Fluxos · Orquestração · Serviços externos</sub>
 
 </td>
 </tr>
@@ -172,18 +172,18 @@ APIs · Webhooks · Integrations
 
 <div align="center">
 
-<strong>Interface</strong> → <strong>Application</strong> → <strong>Data</strong> → <strong>Integration</strong>
+<strong>Interface</strong> → <strong>Aplicação</strong> → <strong>Dados</strong> → <strong>Integração</strong>
 
 <br><br>
 
-<sub><strong>The stack follows the product.</strong> I engineer across the layers that turn an idea into a working system.</sub>
+<sub><strong>A stack segue o produto.</strong> Desenvolvo em todas as camadas que transformam uma ideia em um sistema funcional.</sub>
 
 </div>
 <br>
 
 <div align="center">
 
-### 🧠 CAPABILITIES
+### 🧠 CAPACIDADES
 
 </div>
 
@@ -191,44 +191,44 @@ APIs · Webhooks · Integrations
 <tr>
 <td width="33%" valign="top">
 
-**Product Engineering**
+**Engenharia de Produto**
 
 Regras de negócio · componentes reutilizáveis · interfaces responsivas · fluxos de aplicação
 
 </td>
 <td width="33%" valign="top">
 
-**API & Integration**
+**APIs & Integrações**
 
 APIs REST · webhooks · serviços externos · sincronização de dados
 
 </td>
 <td width="33%" valign="top">
 
-**Frontend Architecture**
+**Arquitetura Frontend**
 
-Estado · data fetching · validação · formulários · component systems
+Estado · busca de dados · validação · formulários · sistemas de componentes
 
 </td>
 </tr>
 <tr>
 <td width="33%" valign="top">
 
-**Backend Architecture**
+**Arquitetura Backend**
 
 Node.js · Python · PHP · camadas de API · integrações
 
 </td>
 <td width="33%" valign="top">
 
-**Automation & AI**
+**Automação & IA**
 
 Automação · recursos com IA · assistentes · agentes · processos estruturados
 
 </td>
 <td width="33%" valign="top">
 
-**Delivery & Quality**
+**Entrega & Qualidade**
 
 Testes · validação · código sustentável · segurança · confiabilidade
 
@@ -240,23 +240,23 @@ Testes · validação · código sustentável · segurança · confiabilidade
 
 <div align="center">
 
-### 🔄 FROM IDEA TO SYSTEM
+### 🔄 DA IDEIA AO SISTEMA
 
-<strong>Problem</strong>
+<strong>Problema</strong>
 &nbsp;→&nbsp;
-<strong>Architecture</strong>
+<strong>Arquitetura</strong>
 &nbsp;→&nbsp;
-<strong>Build</strong>
+<strong>Construir</strong>
 &nbsp;→&nbsp;
-<strong>Integrate</strong>
+<strong>Integrar</strong>
 &nbsp;→&nbsp;
-<strong>Automate</strong>
+<strong>Automatizar</strong>
 &nbsp;→&nbsp;
-<strong>Scale</strong>
+<strong>Escalar</strong>
 
 <br><br>
 
-<sub><strong>The stack follows the problem.</strong> I choose technologies according to the product, workflow and constraints — not the other way around.</sub>
+<sub><strong>A stack segue o problema.</strong> Escolho as tecnologias de acordo com o produto, processo e restrições — e não o contrário.</sub>
 
 </div>
 ---
