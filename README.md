@@ -1,13 +1,13 @@
 <div align="center">
 
-<img src="./header.svg" width="900" alt="Wilkerio — Full-Stack Engineering, Business Systems & Automation" />
+<img src="./header.svg" width="900" alt="Wilkerio — Full-Stack Engineer" />
 
-<br><br>
+<br>
 
-<h2>Software that solves real workflows.</h2>
+<h2>Building software where <em>technology meets business.</em></h2>
 
 <p>
-Full-Stack Engineering · Business Systems · Automation · AI-enabled Applications
+Full-Stack Engineering&nbsp;&nbsp;·&nbsp;&nbsp;Business Systems&nbsp;&nbsp;·&nbsp;&nbsp;Automation&nbsp;&nbsp;·&nbsp;&nbsp;AI
 </p>
 
 <br>
@@ -22,110 +22,133 @@ Full-Stack Engineering · Business Systems · Automation · AI-enabled Applicati
 
 <img src="./badges.svg" width="800" alt="Security and AI" />
 
-<br><br>
-
 </div>
 
-## About
+---
 
-I build web applications and business software that connect **interfaces, data, APIs, automation and operational workflows** into usable products.
+## <img src="https://raw.githubusercontent.com/denvercoder1/readme-typing-svg/main/demo/terminal.gif" width="24"> About me
 
-My work spans the full stack, with a strong focus on:
+I'm **Wilkerio**, a full-stack engineer focused on building applications that connect **people, data and business processes**.
 
-- **Business systems** — CRM, dashboards, internal tools and operational platforms
-- **Full-stack applications** — React, TypeScript, Node.js, APIs and databases
-- **Automation** — integrations, workflow automation and process orchestration
-- **AI-enabled software** — practical AI features connected to real business processes
-- **Data-driven products** — analytics, reporting, imports, exports and visualization
-- **Web & commerce** — WordPress, Shopify and conversion-focused applications
+I like working on the part of software where things get real:
 
-I care about the layer between **technical implementation and business operation**: understanding how a process works, modeling it in software, connecting the necessary systems and delivering an interface people can actually use.
+> **A business has a problem → the workflow is understood → the system is designed → the software automates it.**
 
-## Core stack
+My projects usually sit at the intersection of **product engineering, business software, integrations and automation**.
+
+---
+
+## ⚡ What I build
+
+| 🧩 Business Systems | ⚙️ Automation | 🧠 AI & Products |
+|:---|:---|:---|
+| CRM & internal platforms | API integrations | AI-enabled applications |
+| Dashboards & operations | Workflow automation | AI agents & assistants |
+| Data management | Process orchestration | Intelligent workflows |
+| Reporting & analytics | External services | Product experiments |
+
+<br>
+
+| 💻 Full-Stack | 📊 Data | 🌐 Web |
+|:---|:---|:---|
+| React + TypeScript | PostgreSQL | WordPress |
+| Node.js + APIs | Supabase | Shopify |
+| Python / PHP | Charts & reporting | Conversion-focused UI |
+
+---
+
+## 🛠️ Technology
 
 **Frontend**
-React · TypeScript · JavaScript · Vite · Tailwind CSS
+
+`React` `TypeScript` `JavaScript` `Vite` `Tailwind CSS`
 
 **Backend & Data**
-Node.js · Python · PHP · Supabase · PostgreSQL · REST APIs
+
+`Node.js` `Python` `PHP` `Supabase` `PostgreSQL` `REST APIs`
 
 **Engineering**
-Docker · Git · React Query · Zod · testing · component systems
+
+`Docker` `Git` `React Query` `Zod` `Testing`
 
 **Automation & AI**
-API integrations · workflow automation · AI-enabled applications · agents
 
-**Web**
-WordPress · Shopify
+`API Integrations` `Workflow Automation` `AI Applications` `Agents`
 
-## Selected work
+---
 
-### Business & operational software
+## 🚀 What you'll find here
 
-Projects in this area focus on turning complex workflows into structured software: dashboards, data management, operational modules, document flows, CRM capabilities and internal tools.
+This profile is a mix of **real products, experiments, prototypes and engineering studies**.
 
-### Data & analytics
+### 🏢 Business software
+Systems designed around operational workflows, structured data, dashboards, CRM concepts and internal processes.
 
-I build interfaces that transform operational data into searchable, filterable and actionable information — including dashboards, reports, imports, exports and visualizations.
+### 📈 Data-driven applications
+Interfaces that turn complex information into searchable, filterable and actionable views.
 
-### Automation & AI
+### 🤖 Automation & AI
+Projects exploring how automation and AI can become part of an actual workflow — not just a standalone demo.
 
-I explore how AI and automation can be connected to existing business workflows instead of existing as isolated demos.
+### 🧱 Product engineering
+End-to-end work across interface, application logic, data, APIs and integrations.
 
-### Product engineering
+> Some projects remain private because they contain client or proprietary material. The public repositories are the work I can responsibly share.
 
-From the first interface to backend services, database design and integrations, I work across the product lifecycle when the project requires end-to-end ownership.
+---
 
-## Engineering approach
-
-```
-Understand the workflow
-        ↓
-Model the data
-        ↓
-Design the product
-        ↓
-Build the system
-        ↓
-Connect integrations
-        ↓
-Validate the result
-```
-
-The technology should serve the problem.
-
-I prefer software that is **clear, modular, maintainable and useful** over complexity that exists only to look impressive.
-
-## GitHub as a portfolio
-
-This account contains different kinds of work:
-
-- portfolio-ready applications;
-- public experiments and prototypes;
-- business and operational software;
-- AI and automation experiments;
-- frontend and full-stack projects;
-- technical explorations.
-
-Some repositories are intentionally private because they contain client, business or proprietary material. Public repositories are the appropriate place to demonstrate the engineering patterns, product thinking and technical capabilities I can share.
-
-## Current direction
+## 🧠 How I think about software
 
 ```
-FULL-STACK ENGINEERING
-          +
+        PROBLEM
+           │
+           ▼
+       WORKFLOW
+           │
+           ▼
+       DATA MODEL
+           │
+           ▼
+      APPLICATION
+           │
+      ┌────┴────┐
+      ▼         ▼
+   APIs      AUTOMATION
+      │         │
+      └────┬────┘
+           ▼
+        RESULT
+```
+
+**Good software isn't just technically impressive.**
+
+It should make a process **clearer, faster, more reliable or easier to operate.**
+
+---
+
+## 🎯 Current focus
+
+<div align="center">
+
+```
+FULL-STACK
+    +
 BUSINESS SYSTEMS
-          +
+    +
 AUTOMATION
-          +
+    +
 AI
 ```
 
-The goal:
-
-**Build software that does more than look good — software that moves a real process forward.**
-
 <br>
+
+**Building systems that move real work forward.**
+
+</div>
+
+---
+
+## 📊 GitHub activity
 
 <div align="center">
 
@@ -135,6 +158,14 @@ The goal:
 
 <br><br>
 
-📍 Brazil · Full-Stack Engineering · Business Systems · Automation
+<sub>Brazil · Full-Stack Engineering · Business Systems · Automation</sub>
+
+</div>
+
+---
+
+<div align="center">
+
+<sub>Design systems. Build products. Automate workflows. Keep improving.</sub>
 
 </div>
