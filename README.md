@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="./header.svg" width="900" alt="Wilkerio — Full-Stack Engineer" />
+<img src="./header.svg" width="900" alt="Wilker — Full-Stack Engineer" />
 
 <br><br>
 
-<h1>Wilkerio</h1>
+<h1>Wilker</h1>
 
 <h3>Full-Stack Engineer · Business Systems · Automation · AI</h3>
 
@@ -16,8 +16,8 @@ I turn <strong>business workflows</strong> into <strong>software people can actu
 
 <br>
 
-<a href="https://github.com/Wilkerio">
-  <img src="https://img.shields.io/badge/GitHub-Wilkerio-111111?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+<a href="https://github.com/Wilker">
+  <img src="https://img.shields.io/badge/GitHub-Wilker-111111?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
 </a>
 &nbsp;
 <a href="https://www.upwork.com/freelancers/~01">
@@ -52,7 +52,7 @@ I turn <strong>business workflows</strong> into <strong>software people can actu
 
 ## 👋 About
 
-I'm **Wilkerio**, a Brazilian full-stack engineer who builds software at the intersection of **business, data and automation**.
+I'm **Wilker**, a Brazilian full-stack engineer who builds software at the intersection of **business, data and automation**.
 
 I focus on turning complex or manual operations into **clear, reliable digital systems** — from the interface people use to the APIs, data layer and integrations behind it.
 
