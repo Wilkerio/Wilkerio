@@ -42,31 +42,32 @@ I turn <strong>business workflows</strong> into <strong>software people can actu
 
 ## 👋 About
 
-I'm **Wilkerio**, a Brazilian full-stack engineer focused on the intersection of:
+I'm **Wilkerio**, a Brazilian full-stack engineer who builds software at the intersection of **business, data and automation**.
 
-**software engineering × business operations × automation × product thinking**
+I focus on turning complex or manual operations into **clear, reliable digital systems** — from the interface people use to the APIs, data layer and integrations behind it.
 
-I enjoy taking something that currently lives in **spreadsheets, repetitive tasks, disconnected tools or manual workflows** and turning it into a structured digital system.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-### The kind of problem I like
+### What drives my work
 
-```
-BUSINESS PROBLEM
-      ↓
-UNDERSTAND THE WORKFLOW
-      ↓
-MODEL THE DATA
-      ↓
-DESIGN THE EXPERIENCE
-      ↓
-BUILD THE SYSTEM
-      ↓
-CONNECT APIs & AUTOMATIONS
-      ↓
-DELIVER A USEFUL RESULT
-```
+**Business → Software**
 
-That's the common thread behind the projects on this profile.
+I start with the workflow, understand the rules and translate them into a system that is easier to operate, maintain and scale.
+
+</td>
+<td width="50%" valign="top">
+
+### What I care about
+
+**Clarity · Reliability · Automation**
+
+Good engineering should remove friction, connect the right systems and make the underlying process easier to understand.
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -78,42 +79,33 @@ That's the common thread behind the projects on this profile.
 
 ### 🏢 Business Systems
 
-CRM, dashboards, internal platforms and operational software.
+**Software for real operations.**
 
-**Focus**
-- workflows
-- permissions & data
-- dashboards
-- CRUD / business logic
-- operational interfaces
+CRM · dashboards · internal platforms · operational tools
+
+<sub>Workflows · data · permissions · business logic · reporting</sub>
 
 </td>
 <td width="33%" valign="top">
 
 ### ⚙️ Automation
 
-Systems that reduce repetitive work and connect disconnected tools.
+**Systems that connect the pieces.**
 
-**Focus**
-- REST APIs
-- integrations
-- webhooks
-- synchronization
-- workflow orchestration
+APIs · integrations · webhooks · synchronization
+
+<sub>Orchestration · process automation · external services</sub>
 
 </td>
 <td width="33%" valign="top">
 
-### 🧠 AI-enabled Software
+### 🧠 AI-enabled Products
 
-AI connected to products and real workflows — not isolated demos.
+**AI inside useful workflows.**
 
-**Focus**
-- AI features
-- assistants
-- agents
-- structured workflows
-- API-based AI
+AI features · assistants · agents · intelligent workflows
+
+<sub>APIs · structured processes · product integration</sub>
 
 </td>
 </tr>
@@ -123,59 +115,49 @@ AI connected to products and real workflows — not isolated demos.
 
 ## 🚀 Engineering across the stack
 
-| Layer | Technologies |
+| Layer | What I work with |
 |:--|:--|
 | **Frontend** | React · TypeScript · JavaScript · Vite · Tailwind CSS |
 | **Backend** | Node.js · Python · PHP · REST APIs |
 | **Data** | PostgreSQL · Supabase · data modeling · analytics |
-| **Application** | React Query · Zod · forms · component systems · testing |
+| **Application** | React Query · Zod · component systems · forms · testing |
 | **Automation** | APIs · webhooks · integrations · workflow automation |
 | **Web & Commerce** | WordPress · Shopify |
 
-<br>
-
-> I don't choose a stack just because it's popular.  
-> **The stack should fit the product, the workflow and the constraints.**
+> **The stack follows the problem.**  
+> I choose technologies according to the product, workflow and constraints — not the other way around.
 
 ---
 
-## 🔍 How I approach a project
+## 🔍 How I approach engineering
 
-**01 — Understand**
+<table>
+<tr>
+<td align="center"><strong>01</strong><br><sub>UNDERSTAND</sub></td>
+<td align="center"><strong>02</strong><br><sub>MODEL</sub></td>
+<td align="center"><strong>03</strong><br><sub>BUILD</sub></td>
+<td align="center"><strong>04</strong><br><sub>CONNECT</sub></td>
+<td align="center"><strong>05</strong><br><sub>REFINE</sub></td>
+</tr>
+</table>
 
-What is the actual problem? Who uses the system? Where does the current workflow break?
-
-**02 — Model**
-
-Turn requirements into data structures, permissions, states and business rules.
-
-**03 — Build**
-
-Create the interface, application logic, APIs and database layer as one coherent system.
-
-**04 — Connect**
-
-Integrate external services, automation, webhooks and the tools the business already uses.
-
-**05 — Refine**
-
-Improve usability, reliability, maintainability and the parts that matter to the operation.
+**Understand** the real workflow → **Model** data, states and rules → **Build** the product → **Connect** APIs and services → **Refine** the experience and reliability.
 
 ---
 
 ## 📂 What's inside this GitHub
 
-<table>
-<tr>
-<td><strong>🟢 Public</strong><br><sub>Projects I can openly showcase</sub></td>
-<td><strong>🧪 Experiments</strong><br><sub>Ideas, prototypes & technical exploration</sub></td>
-<td><strong>🔒 Private</strong><br><sub>Client & proprietary systems</sub></td>
-</tr>
-</table>
+<div align="center">
 
-The public repositories are only part of the picture. Some professional work cannot be published because it involves private business logic, client data or proprietary systems.
+| 🟢 **Public Projects** | 🧪 **Experiments** | 🔒 **Private Work** |
+|:--:|:--:|:--:|
+| Work I can openly showcase | Prototypes & technical exploration | Client & proprietary systems |
 
-**The goal here is not to publish everything. It's to publish the right things.**
+</div>
+
+Some professional systems cannot be published because they contain private business logic, client data or proprietary material.
+
+**This profile is curated — not exhaustive.**
 
 ---
 
@@ -184,34 +166,14 @@ The public repositories are only part of the picture. Some professional work can
 <div align="center">
 
 <h2>FULL-STACK ENGINEERING</h2>
-
 <p>↓</p>
-
 <h3>BUSINESS SYSTEMS</h3>
-
 <p>↓</p>
-
 <h3>AUTOMATION + AI</h3>
 
 <br>
 
-<strong>Software that turns real processes into scalable systems.</strong>
-
-</div>
-
----
-
-## 📊 Activity
-
-<div align="center">
-
-<h3><code>wilkerio@dev ~ $ ./contributions.sh</code></h3>
-
-<img src="./heatmap.svg" width="782" alt="Contribution heatmap" />
-
-<br><br>
-
-<sub>🇧🇷 Brazil · Building systems, products and automations</sub>
+<strong>Building software that turns real processes into scalable systems.</strong>
 
 </div>
 
