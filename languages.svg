@@ -1,4 +1,4 @@
-<svg width="700" height="114" viewBox="0 0 700 114" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Distribuição de linguagem nos repositórios">
+<svg width="700" height="114" viewBox="0 0 700 114" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Language distribution across repositories">
   <style>
     .title { font: 600 12px "Cascadia Code","Fira Code",monospace; fill: #6e7681; letter-spacing: 1px; }
     .seg { opacity: 0; transform-origin: left; animation: growBar 0.5s ease-out forwards; }
