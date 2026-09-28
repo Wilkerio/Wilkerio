@@ -34,31 +34,32 @@ Transformo <strong>processos de negócio</strong> em <strong>software que as pes
 
 ## 👋 Sobre mim
 
-Sou **Wilkerio**, engenheiro full-stack brasileiro focado na interseção entre:
+Sou **Wilkerio**, engenheiro full-stack brasileiro que desenvolve software na interseção entre **negócios, dados e automação**.
 
-**engenharia de software × operações de negócio × automação × produto**
+Meu foco é transformar operações complexas ou manuais em **sistemas digitais claros, confiáveis e estruturados** — da interface utilizada pelas pessoas às APIs, dados e integrações que sustentam o produto.
 
-Gosto de pegar algo que hoje depende de **planilhas, tarefas repetitivas, ferramentas desconectadas ou processos manuais** e transformar isso em um sistema digital estruturado.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-### O tipo de problema que gosto de resolver
+### O que orienta meu trabalho
 
-```
-PROBLEMA DE NEGÓCIO
-        ↓
-ENTENDER O PROCESSO
-        ↓
-MODELAR OS DADOS
-        ↓
-DESENHAR A EXPERIÊNCIA
-        ↓
-CONSTRUIR O SISTEMA
-        ↓
-CONECTAR APIs E AUTOMAÇÕES
-        ↓
-ENTREGAR UM RESULTADO ÚTIL
-```
+**Negócio → Software**
 
-Esse é o fio condutor dos projetos deste perfil.
+Começo pelo processo, entendo as regras e transformo tudo em um sistema mais fácil de operar, manter e evoluir.
+
+</td>
+<td width="50%" valign="top">
+
+### O que considero importante
+
+**Clareza · Confiabilidade · Automação**
+
+Boa engenharia deve reduzir atrito, conectar os sistemas certos e tornar o processo mais fácil de entender.
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -70,42 +71,33 @@ Esse é o fio condutor dos projetos deste perfil.
 
 ### 🏢 Sistemas de Negócios
 
-CRMs, dashboards, plataformas internas e softwares operacionais.
+**Software para operações reais.**
 
-**Foco**
-- processos
-- permissões e dados
-- dashboards
-- CRUD / regras de negócio
-- interfaces operacionais
+CRM · dashboards · plataformas internas · ferramentas operacionais
+
+<sub>Processos · dados · permissões · regras de negócio · relatórios</sub>
 
 </td>
 <td width="33%" valign="top">
 
 ### ⚙️ Automação
 
-Sistemas que reduzem tarefas repetitivas e conectam ferramentas desconectadas.
+**Sistemas que conectam as peças.**
 
-**Foco**
-- APIs REST
-- integrações
-- webhooks
-- sincronização
-- orquestração de fluxos
+APIs · integrações · webhooks · sincronização
+
+<sub>Orquestração · automação de processos · serviços externos</sub>
 
 </td>
 <td width="33%" valign="top">
 
-### 🧠 Software com IA
+### 🧠 Produtos com IA
 
-IA conectada a produtos e processos reais — não apenas demonstrações isoladas.
+**IA dentro de fluxos realmente úteis.**
 
-**Foco**
-- recursos com IA
-- assistentes
-- agentes
-- fluxos estruturados
-- APIs de IA
+Recursos com IA · assistentes · agentes · fluxos inteligentes
+
+<sub>APIs · processos estruturados · integração com produtos</sub>
 
 </td>
 </tr>
@@ -115,59 +107,49 @@ IA conectada a produtos e processos reais — não apenas demonstrações isolad
 
 ## 🚀 Engenharia de ponta a ponta
 
-| Camada | Tecnologias |
+| Camada | Com o que trabalho |
 |:--|:--|
 | **Frontend** | React · TypeScript · JavaScript · Vite · Tailwind CSS |
 | **Backend** | Node.js · Python · PHP · APIs REST |
 | **Dados** | PostgreSQL · Supabase · modelagem de dados · analytics |
-| **Aplicação** | React Query · Zod · formulários · sistemas de componentes · testes |
+| **Aplicação** | React Query · Zod · sistemas de componentes · formulários · testes |
 | **Automação** | APIs · webhooks · integrações · automação de processos |
 | **Web e Comércio** | WordPress · Shopify |
 
-<br>
-
-> Não escolho uma stack apenas porque ela é popular.  
-> **A tecnologia precisa fazer sentido para o produto, o processo e as restrições.**
+> **A stack segue o problema.**  
+> Escolho tecnologias de acordo com o produto, o processo e as restrições — e não o contrário.
 
 ---
 
-## 🔍 Como abordo um projeto
+## 🔍 Como abordo a engenharia
 
-**01 — Entender**
+<table>
+<tr>
+<td align="center"><strong>01</strong><br><sub>ENTENDER</sub></td>
+<td align="center"><strong>02</strong><br><sub>MODELAR</sub></td>
+<td align="center"><strong>03</strong><br><sub>CONSTRUIR</sub></td>
+<td align="center"><strong>04</strong><br><sub>CONECTAR</sub></td>
+<td align="center"><strong>05</strong><br><sub>REFINAR</sub></td>
+</tr>
+</table>
 
-Qual é o problema real? Quem utiliza o sistema? Onde o processo atual falha?
-
-**02 — Modelar**
-
-Transformar requisitos em estruturas de dados, permissões, estados e regras de negócio.
-
-**03 — Construir**
-
-Desenvolver interface, lógica da aplicação, APIs e banco de dados como um sistema coerente.
-
-**04 — Conectar**
-
-Integrar serviços externos, automações, webhooks e as ferramentas que o negócio já utiliza.
-
-**05 — Refinar**
-
-Melhorar usabilidade, confiabilidade, manutenção e os pontos que realmente impactam a operação.
+**Entender** o processo real → **Modelar** dados, estados e regras → **Construir** o produto → **Conectar** APIs e serviços → **Refinar** experiência e confiabilidade.
 
 ---
 
 ## 📂 O que existe neste GitHub
 
-<table>
-<tr>
-<td><strong>🟢 Público</strong><br><sub>Projetos que posso apresentar abertamente</sub></td>
-<td><strong>🧪 Experimentos</strong><br><sub>Ideias, protótipos e explorações técnicas</sub></td>
-<td><strong>🔒 Privado</strong><br><sub>Sistemas de clientes e projetos proprietários</sub></td>
-</tr>
-</table>
+<div align="center">
 
-Os repositórios públicos representam apenas uma parte do meu trabalho. Alguns projetos profissionais não podem ser publicados porque envolvem regras de negócio privadas, dados de clientes ou sistemas proprietários.
+| 🟢 **Projetos Públicos** | 🧪 **Experimentos** | 🔒 **Trabalho Privado** |
+|:--:|:--:|:--:|
+| Projetos que posso apresentar | Protótipos e exploração técnica | Sistemas de clientes e proprietários |
 
-**A ideia não é publicar tudo. É publicar o que pode ser mostrado com responsabilidade.**
+</div>
+
+Alguns sistemas profissionais não podem ser publicados porque envolvem regras de negócio privadas, dados de clientes ou material proprietário.
+
+**Este perfil é curado — não exaustivo.**
 
 ---
 
@@ -176,34 +158,14 @@ Os repositórios públicos representam apenas uma parte do meu trabalho. Alguns 
 <div align="center">
 
 <h2>ENGENHARIA FULL-STACK</h2>
-
 <p>↓</p>
-
 <h3>SISTEMAS DE NEGÓCIOS</h3>
-
 <p>↓</p>
-
 <h3>AUTOMAÇÃO + IA</h3>
 
 <br>
 
-<strong>Software que transforma processos reais em sistemas escaláveis.</strong>
-
-</div>
-
----
-
-## 📊 Atividade
-
-<div align="center">
-
-<h3><code>wilkerio@dev ~ $ ./contributions.sh</code></h3>
-
-<img src="./heatmap.svg" width="782" alt="Heatmap de contribuições" />
-
-<br><br>
-
-<sub>🇧🇷 Brasil · Construindo sistemas, produtos e automações</sub>
+<strong>Construindo software que transforma processos reais em sistemas escaláveis.</strong>
 
 </div>
 
