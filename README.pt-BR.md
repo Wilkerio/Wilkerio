@@ -128,6 +128,28 @@ Recursos com IA · assistentes · agentes · fluxos inteligentes
 | **Automação** | APIs · webhooks · integrações · automação de processos |
 | **Web e Comércio** | WordPress · Shopify |
 
+<br>
+
+### 🏗️ Capacidades de engenharia
+
+| Área | Foco |
+|:--|:--|
+| **Engenharia de Produto** | Regras de negócio · componentes reutilizáveis · interfaces responsivas · fluxos de aplicação |
+| **APIs e Integrações** | APIs REST · webhooks · serviços externos · sincronização de dados |
+| **Dados e Arquitetura** | PostgreSQL · Supabase · schemas · relacionamentos · queries · analytics |
+| **Arquitetura Frontend** | Estado em React · busca de dados · validação · formulários · sistemas de componentes |
+| **Arquitetura Backend** | Node.js · Python · PHP · camadas de API · integrações de serviços |
+| **Automação e IA** | Automação de processos · recursos com IA · assistentes · agentes · processos estruturados |
+| **Entrega e Qualidade** | Testes · validação · código sustentável · desenvolvimento orientado à segurança |
+
+### 🔄 Da ideia ao sistema
+
+<div align="center">
+
+<strong>Problema de negócio</strong> → <strong>Arquitetura</strong> → <strong>Implementação</strong> → <strong>Integração</strong> → <strong>Dados</strong> → <strong>Automação</strong> → <strong>Produto</strong>
+
+</div>
+
 > **A stack segue o problema.**  
 > Escolho tecnologias de acordo com o produto, o processo e as restrições — e não o contrário.
 
