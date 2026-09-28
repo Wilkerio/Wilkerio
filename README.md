@@ -23,6 +23,14 @@ I turn <strong>business workflows</strong> into <strong>software people can actu
 <a href="https://www.upwork.com/freelancers/~01">
   <img src="https://img.shields.io/badge/Upwork-Available-14a800?style=for-the-badge&logo=upwork&logoColor=white" alt="Upwork" />
 </a>
+&nbsp;
+<a href="https://www.workana.com/freelancer/2544f3280e4cff66b6f68d4bec4a2b88">
+  <img src="https://img.shields.io/badge/Workana-Profile-00a650?style=for-the-badge&logo=workana&logoColor=white" alt="Workana" />
+</a>
+&nbsp;
+<a href="https://www.linkedin.com/in/wilkerweb">
+  <img src="https://img.shields.io/badge/LinkedIn-Wilkerio-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
 
 <br><br>
 
